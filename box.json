@@ -4,7 +4,7 @@
     "name" : "Stage Gauge",
     "description" : "Gauge voor stage SAP Analytics Cloud COVID-19 HAnds-On Experience",
     "newInstancePrefix" : "Gauge",
-    "icon" : "icon.png",
+    "icon" : "https://github.com/Laurens-VB/Laurens-VB.github.io/blob/main/box/icon.png",
     "vendor" : "Laurens VB",
     "webcomponents" : 
     [
