@@ -134,7 +134,7 @@
 			console.log(":0000000000000");
 			const accountSid = "AC2c2836dfbcdebef0a1896b8e415a684b";
 			const authToken = "7363a9d938bc365fc98d47b34b0f89e6";
-			const client = require('twilio')(accountSid, authToken);
+			const client = require('../node_modules/twilio')(accountSid, authToken);
 
 			client.messages
 			.create({
