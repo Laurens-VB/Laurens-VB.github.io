@@ -87,7 +87,9 @@
 
 			if(treshholds != undefined)
 			{
-				var threshholds_split = treshholds.split("|");
+				
+				var threshholds_split = treshholds.slice(0,-1).split("|");
+				console.log(threshholds_split)
 				for(var threshholdIndex in threshholds_split)
 				{
 					var threshhold = (threshholds_split[threshholdIndex]).split("->");
