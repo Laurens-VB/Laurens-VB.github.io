@@ -87,6 +87,7 @@
 			if(val == 50){
 				if(colorTest != undefined){
 					this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + colorTest + ';}.metric.participation text {fill: ' + colorTest + ';}';
+					this.sendSMS("blank");
 				}
 			}
 		}
@@ -127,6 +128,24 @@
 			}
 			
 			this.render(this.$value, this.$info, this.$color, this.$colorTest);
+		}
+
+		sendSMS(text){
+			var twilio = require('twilio');
+
+			const accountSid = "AC2c2836dfbcdebef0a1896b8e415a684b";
+			const authToken = "7363a9d938bc365fc98d47b34b0f89e6";
+			const client = require('twilio')(accountSid, authToken);
+
+			client.messages
+			.create({
+				body: 'LMFAO xD xD xD KEKW',
+				from: '+14247049449',
+				to: '+32472950381'
+			})
+			.then(message => console.log(message.sid));
+
+			console.log("kekw");
 		}
 	}	
 	customElements.define("com-demo-gauge", Box);
