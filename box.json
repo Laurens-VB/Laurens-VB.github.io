@@ -4,27 +4,27 @@
     "name" : "Stage Gauge",
     "description" : "Gauge voor stage SAP Analytics Cloud COVID-19 HAnds-On Experience",
     "newInstancePrefix" : "Gauge",
-    "icon" : "https://github.com/Laurens-VB/Laurens-VB.github.io/blob/main/box/icon.png",
+    "icon" : "https://laurens-vb.github.io/box/icon.png",
     "vendor" : "Laurens VB",
     "webcomponents" : 
     [
         {
             "kind" : "main",
-            "tag" : "stage-gauge",
+            "tag" : "com-demo-gauge",
             "url" : "https://github.com/Laurens-VB/GaugeCustomWidgetTest/blob/main/box/box.js",
             "integrity" : "",
             "ignoreIntegrity" : true
         },
         {
             "kind" : "styling",
-            "tag" : "stage-gauge-sps",
+            "tag" : "com-demo-gauge-sps",
             "url" : "https://github.com/Laurens-VB/GaugeCustomWidgetTest/blob/main/box/box_sps.js",
             "integrity" : "",
             "ignoreIntegrity" : true
         },
         {
             "kind" : "builder",
-            "tag" : "stage-gauge-bps",
+            "tag" : "com-demo-gauge-bps",
             "url" : "https://github.com/Laurens-VB/GaugeCustomWidgetTest/blob/main/box/box_bps.js",
             "integrity" : "",
             "ignoreIntegrity" : true
