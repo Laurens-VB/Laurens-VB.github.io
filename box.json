@@ -50,6 +50,12 @@
             "description" : "text color info",
             "default" : "#90cf8a"
         },
+        "colorTest" : 
+        {
+            "type" : "string",
+            "description" : "text color info",
+            "default" : "#90cf8a"
+        },
         "width" : 
         {
             "type" : "integer",
@@ -82,15 +88,26 @@
                     "name" : "newColor",
                     "type" : "string",
                     "description" : "Text Color info"
+                },
+                {
+                    "name" : "testColor",
+                    "type" : "string",
+                    "description" : "Text Color info"
                 }
             ],
-            "body" : "this.value = newValue; this.info = newInfo; this.color = newColor;"
+            "body" : "this.value = newValue; this.info = newInfo; this.color = newColor; this.colorTest = testColor;"
         },
         "getValue" :
         {
             "returnType" : "number",
             "description" : "retourneert Gauge Value",
             "body" : "return this.value;"
+        },
+        "getTestColor" : 
+        {
+            "returnType" : "string",
+            "description" : "retourneert test kleur",
+            "body" : "return this.colorTest;"
         }
 	},
 	"events": 
