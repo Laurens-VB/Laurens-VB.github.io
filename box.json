@@ -60,7 +60,7 @@
         {
             "type" : "string",
             "description" : "thresholds",
-            "default" : ""
+            "default" : "threshold"
         },
         "opslaan" : 
         {

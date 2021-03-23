@@ -87,7 +87,8 @@
 
 			if(treshholds != undefined)
 			{
-				var threshholds_split = treshholds.slice(0,-1).split("|");
+				var threshholds_split = treshholds.slice(0,-1);
+				threshholds_split = threshholds_split.split("|");
 				for(var threshholdIndex in threshholds_split)
 				{
 					var threshhold = (threshholds_split[threshholdIndex]).split("->");
@@ -100,15 +101,13 @@
 					}
 
 				}
+
+				if(opslaan){
+					opslaan(threshholds_split);
+				}
 			}
 
 			console.log("render complete");
-
-			if(opslaan && treshholds != undefined)
-			{
-				document.cookie = "SavedThreshhold=" + treshholds;
-				console.log("opgeslagen");
-			}
 		}
 		  
 		polar_to_cartesian(cx, cy, radius, angle) {
@@ -155,6 +154,11 @@
 			}
 			
 			this.render(this.$value, this.$info, this.$color, this.$colorMid, this.$treshholds, this.$opslaan);
+		}
+
+		opslaan(threshold){
+			document.cookie = "SavedThreshhold=" + treshholds;
+			console.log("opgeslagen");
 		}
 
 		/*
