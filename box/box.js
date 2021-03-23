@@ -88,6 +88,18 @@
 			if(treshholds != undefined)
 			{
 				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
+				console.log(treshholds);
 				var threshholds_split = treshholds.slice(0,-1);
 				threshholds_split = threshholds_split.split("|");
 				for(var threshholdIndex in threshholds_split)
