@@ -106,14 +106,16 @@
         },
         "setTestColor" : 
         {
-            "parameters" :
-            {
-                "name" : "testColor",
-                "type" : "string",
-                "description" : "Text Color info"
-            },
+            "parameters" : 
+            [
+                {
+                    "name" : "testColor",
+                    "type" : "string",
+                    "description" : "Text Color info"
+                }
+            ],
             "description" : "set test kleur",
-            "body" : "t this.colorTest = testColor;"
+            "body" : "this.colorTest = testColor;"
         }
 	},
 	"events": 

@@ -73,7 +73,7 @@
 			this._props = {};
 		}
 		
-		render(val, info, color) {
+		render(val, info, color, colorTest) {
 			var val1 = val * 0.01;
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 			var rounded = Math.round( val * 10 ) / 10;
@@ -85,7 +85,10 @@
 			}
 			
 			if(val == 50){
-				console.log("lmfao");
+				if(colorTest != undefined){
+					console.log("niet undefined");
+				}
+				console.log("undefined")
 				this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + '#db821d' + ';}.metric.participation text {fill: ' + '#db821d' + ';}';
 			}
 		}
@@ -120,8 +123,12 @@
 			if ("color" in changedProperties) {
 				this.$color = changedProperties["color"];
 			}
+
+			if("colorTest" in changedProperties){
+				this.$colorTest = changedProperties["colorTest"];
+			}
 			
-			this.render(this.$value, this.$info, this.$color);
+			this.render(this.$value, this.$info, this.$color, this.$colorTest);
 		}
 	}	
 	customElements.define("com-demo-gauge", Box);
