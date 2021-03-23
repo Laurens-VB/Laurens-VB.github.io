@@ -87,6 +87,7 @@
 			if(val == 50){
 				colorMid = "#e0991d";
 				console.log(colorMid);
+				console.log("xDDDDDDDDD");
 				this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + colorMid + ';}.metric.participation text {fill: ' + colorMid + ';}';
 			}
 		}
