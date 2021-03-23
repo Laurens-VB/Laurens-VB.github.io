@@ -24,7 +24,7 @@
         },
         {
             "kind" : "builder",
-            "tag" : "com-demo-gauge-bps",
+            "tag" : "com-demo-box-bps",
             "url" : "https://github.com/Laurens-VB/GaugeCustomWidgetTest/blob/main/box/box_bps.js",
             "integrity" : "",
             "ignoreIntegrity" : true
