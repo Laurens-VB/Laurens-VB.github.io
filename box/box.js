@@ -87,13 +87,13 @@
 
 			if(treshholds != undefined)
 			{
-				var thresholds_split = treshholds.split("|");
-				for(var thresholdIndex in thresholds_split)
+				var threshholds_split = treshholds.split("|");
+				for(var threshholdIndex in threshholds_split)
 				{
-					var threshhold = (thresholds_split[thresholdIndex]).split("->");
+					var threshhold = (threshholds_split[threshholdIndex]).split("->");
 					
 					var waarde = threshhold[0];
-					var kleur = threshold[1];
+					var kleur = threshhold[1];
 
 					if(val >= waarde){
 						this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + kleur + ';}.metric.participation text {fill: ' + kleur + ';}';
