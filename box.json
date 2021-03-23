@@ -1,6 +1,6 @@
 {
     "id" : "SAC_Stage_Gauge",
-    "version" : "2.0.0",
+    "version" : "3.0.0",
     "name" : "Stage Gauge",
     "description" : "Gauge voor stage SAP Analytics Cloud COVID-19 HAnds-On Experience",
     "newInstancePrefix" : "Gauge",
