@@ -123,6 +123,12 @@
             "description" : "set test kleur",
             "body" : "this.colorMid = colorMid;"
         },
+        "getThreshholds" : 
+        {
+            "returnType" : "string",
+            "description" : "retourneert treshholds",
+            "body" : "return this.treshholds;"
+        },
         "setTreshholds" : 
         {
             "parameters" : 
