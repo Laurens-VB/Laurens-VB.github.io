@@ -94,11 +94,12 @@
 
 			if(val >= 90){
 				if(colorMid != undefined){
-					this.changeColor(colorMid)
 					//this.sendSMS("blank");
 					console.log(":00000");
 				}
 			}
+
+			console.log("render complete");
 		}
 		  
 		polar_to_cartesian(cx, cy, radius, angle) {
@@ -138,8 +139,7 @@
 			
 			this.render(this.$value, this.$info, this.$color, this.$colorMid);
 		}
-
-
+		
 		/*
 		sendSMS(text){
 			const accountSid = "AC2c2836dfbcdebef0a1896b8e415a684b";
