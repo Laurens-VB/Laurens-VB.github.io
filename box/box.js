@@ -88,7 +88,7 @@
 			if(treshholds != undefined)
 			{
 				var thresholds_split = treshholds.split("|");
-				foreach(threshold in thresholds_split)
+				for(var threshold in thresholds_split)
 				{
 					console.log(threshold);
 				}
