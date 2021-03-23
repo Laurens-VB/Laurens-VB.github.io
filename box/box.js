@@ -84,19 +84,7 @@
 				this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text class="percentage" text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + rounded + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
 			}
 
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
-			console.log(treshholds);
+			/*
 
 			if(treshholds != undefined)
 			{
@@ -119,6 +107,8 @@
 					opslaan(threshholds_split);
 				}
 			}
+
+			*/
 
 			console.log("render complete");
 		}

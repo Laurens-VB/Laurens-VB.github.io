@@ -148,6 +148,12 @@
             "description" : "set tresholds",
             "body" : "this.treshholds = treshholds;"
         },
+        "getOpslaan" :
+        {
+            "returnType" : "boolean",
+            "description" : "retourneert opslaan",
+            "body" : "return this.opslaan;"
+        },
         "setOpslaan" : 
         {
             "parameters" : 
