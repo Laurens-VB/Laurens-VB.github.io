@@ -62,6 +62,12 @@
             "description" : "thresholds",
             "default" : ""
         },
+        "opslaan" : 
+        {
+            "type" : "boolean",
+            "description" : "opslaan",
+            "default" : ""
+        },
         "width" : 
         {
             "type" : "integer",
@@ -141,6 +147,19 @@
             ],
             "description" : "set tresholds",
             "body" : "this.treshholds = treshholds;"
+        },
+        "setOpslaan" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "opslaan",
+                    "type" : "boolean",
+                    "description" : "opslaan"
+                }
+            ],
+            "description" : "set opslaan",
+            "body" : "this.opslaan = opslaan;"
         }
 	},
 	"events": 
