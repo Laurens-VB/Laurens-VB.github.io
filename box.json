@@ -88,14 +88,9 @@
                     "name" : "newColor",
                     "type" : "string",
                     "description" : "Text Color info"
-                },
-                {
-                    "name" : "testColor",
-                    "type" : "string",
-                    "description" : "Text Color info"
                 }
             ],
-            "body" : "this.value = newValue; this.info = newInfo; this.color = newColor; this.colorTest = testColor;"
+            "body" : "this.value = newValue; this.info = newInfo; this.color = newColor;"
         },
         "getValue" :
         {
@@ -108,6 +103,17 @@
             "returnType" : "string",
             "description" : "retourneert test kleur",
             "body" : "return this.colorTest;"
+        },
+        "setTestColor" : 
+        {
+            "parameters" :
+            {
+                "name" : "testColor",
+                "type" : "string",
+                "description" : "Text Color info"
+            },
+            "description" : "set test kleur",
+            "body" : "t this.colorTest = testColor;"
         }
 	},
 	"events": 
