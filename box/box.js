@@ -73,7 +73,7 @@
 			this._props = {};
 		}
 		
-		render(val, info, color, colorMid) {
+		render(val, info, color, colorMid, treshholds) {
 			var val1 = val * 0.01;
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 			var rounded = Math.round( val * 10 ) / 10;
@@ -84,20 +84,16 @@
 				this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text class="percentage" text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + rounded + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
 			}
 
-			console.log("colormid is: "+colorMid);
+			var thresholds_split = treshholds.split("|");
+			foreach(threshold in thresholds_split)
+			{
+				console.log(threshold);
+			}
 			
 			if(val >= 50){
 				if(colorMid != undefined){
 					this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + colorMid + ';}.metric.participation text {fill: ' + colorMid + ';}';				
 					//this.sendSMS("blank");
-					console.log("kekgar");
-				}
-			}
-
-			if(val >= 90){
-				if(colorMid != undefined){
-					//this.sendSMS("blank");
-					console.log(":00000");
 				}
 			}
 
@@ -137,11 +133,13 @@
 
 			if("colorMid" in changedProperties){
 				this.$colorMid = changedProperties["colorMid"];
+			}
 
-				console.log("UWU")
+			if("treshholds" in changedProperties){
+				this.$colorMid = changedProperties["treshholds"];
 			}
 			
-			this.render(this.$value, this.$info, this.$color, this.$colorMid);
+			this.render(this.$value, this.$info, this.$color, this.$colorMid, this.$treshholds);
 		}
 
 		/*

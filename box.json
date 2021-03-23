@@ -56,6 +56,12 @@
             "description" : "text color info",
             "default" : "#90cf8a"
         },
+        "treshholds" : 
+        {
+            "type" : "string",
+            "description" : "thresholds",
+            "default" : ""
+        },
         "width" : 
         {
             "type" : "integer",
@@ -116,6 +122,19 @@
             ],
             "description" : "set test kleur",
             "body" : "this.colorMid = colorMid;"
+        },
+        "setTreshholds" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "treshholds",
+                    "type" : "string",
+                    "description" : "Treshholds split by | "
+                }
+            ],
+            "description" : "set tresholds",
+            "body" : "this.treshholds = treshholds;"
         }
 	},
 	"events": 
