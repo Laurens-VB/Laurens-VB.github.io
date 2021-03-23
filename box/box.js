@@ -85,7 +85,7 @@
 			}
 
 
-			if(thresholds != undefined)
+			if(treshholds != undefined)
 			{
 				var thresholds_split = treshholds.split("|");
 				foreach(threshold in thresholds_split)
