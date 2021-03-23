@@ -85,14 +85,14 @@
 			}
 			
 			if(val >= 50){
-				if(colorTest != undefined){
+				if(colorMid != undefined){
 					this.changeColor(colorMid)					
 					//this.sendSMS("blank");
 				}
 			}
 
 			if(val >= 90){
-				if(colorTest != undefined){
+				if(colorMid != undefined){
 					this.changeColor(colorMid)
 					//this.sendSMS("blank");
 				}
