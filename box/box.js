@@ -73,7 +73,7 @@
 			this._props = {};
 		}
 		
-		render(val, info, color, colorMid) {
+		render(val, info, color) {
 			var val1 = val * 0.01;
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 			var rounded = Math.round( val * 10 ) / 10;
@@ -85,6 +85,7 @@
 			}
 			
 			if(val == 50){
+				colorMid = "#e0991d";
 				console.log(colorMid);
 				this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + colorMid + ';}.metric.participation text {fill: ' + colorMid + ';}';
 			}
