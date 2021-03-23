@@ -50,7 +50,7 @@
             "description" : "text color info",
             "default" : "#90cf8a"
         },
-        "colorTest" : 
+        "colorMid" : 
         {
             "type" : "string",
             "description" : "text color info",
@@ -98,24 +98,24 @@
             "description" : "retourneert Gauge Value",
             "body" : "return this.value;"
         },
-        "getTestColor" : 
+        "getMidColor" : 
         {
             "returnType" : "string",
             "description" : "retourneert test kleur",
-            "body" : "return this.colorTest;"
+            "body" : "return this.colorMid;"
         },
-        "setTestColor" : 
+        "setMidColor" : 
         {
             "parameters" : 
             [
                 {
-                    "name" : "testColor",
+                    "name" : "colorMid",
                     "type" : "string",
                     "description" : "Text Color info"
                 }
             ],
             "description" : "set test kleur",
-            "body" : "this.colorTest = testColor;"
+            "body" : "this.colorMid = colorMid;"
         }
 	},
 	"events": 
