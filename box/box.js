@@ -92,6 +92,7 @@
 					if(cookie.startsWith("SavedThreshhold="))
 					{
 						var threshholds_split = treshholds.splice(0,16).split(",");
+						console.log(threshholds_split);
 						for(var threshholdIndex in threshholds_split)
 						{
 							var threshhold = (threshholds_split[threshholdIndex]).split("->");
