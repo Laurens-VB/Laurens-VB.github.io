@@ -18,7 +18,7 @@
                 mode: "open"
             });
 
-            shadowRoot.appendChild(colorpickerHTML.contentEditable.cloneNode(true));
+            shadowRoot.appendChild(colorpickerHTML.content.cloneNode(true));
 
             this.addEventListener("click", event => {
                 var event = new Event("onClick");
@@ -45,6 +45,8 @@
             {
                 this.$color = changedProperties["color"];
             }
+
+            this.render(this.$color);
         }
     }
 

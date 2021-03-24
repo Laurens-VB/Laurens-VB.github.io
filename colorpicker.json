@@ -9,7 +9,7 @@
     [
         {
             "kind" : "main",
-            "tag" : "colorpicker",
+            "tag" : "com-colorpicker",
             "url" : "https://github.com/Laurens-VB/Laurens-VB.github.io/blob/main/colorpicker/colorpicker.js",
             "integrity" : "",
             "ignoreIntegrity" : true
