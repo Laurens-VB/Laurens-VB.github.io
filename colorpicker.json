@@ -9,7 +9,7 @@
     [
         {
 			"kind": "main",
-			"tag": "com-sap-sample-helloworld1",
+			"tag": "com-colorpicker",
             "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
             "integrity": "",
             "ignoreIntegrity" : true
@@ -17,9 +17,21 @@
     ],
     "properties": 
     {
+        "color" : 
+        {
+            "type" : "string",
+            "description" : "color",
+            "default" : "#90cf8a"
+        }
 	},
 	"methods": 
     {
+        "getColor":
+        {
+            "returnType" : "string",
+            "description" : "retourneert kleur",
+            "body" : "return this.color;"
+        }
 	},
 	"events": 
     {
