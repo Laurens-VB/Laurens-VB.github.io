@@ -92,8 +92,8 @@
 				console.log(decodedCookie);
 				var split_decodedCookie = decodedCookie.split(",");
 				console.log("FOR LOOP");
-				for(var i in split_decodedCookie){
-					console.log(split_decodedCookie[i]);
+				for(var slicedCookie in split_decodedCookie){
+					console.log(slicedCookie);
 				}
 				console.log("-----------------------------------");
 			}
@@ -103,7 +103,7 @@
 				var threshholds_split = treshholds.slice(0,-1).split("|");
 				for(var threshholdIndex in threshholds_split)
 				{
-					var threshhold = (threshholds_split[threshholdIndex])
+					var threshhold = (threshholds_split[threshholdIndex]).split("->");
 					
 					var waarde = threshhold[0];
 					var kleur = threshhold[1];
