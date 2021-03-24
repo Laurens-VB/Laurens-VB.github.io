@@ -121,7 +121,7 @@
 				}
 			}
 
-			if(treshholds != undefined)
+			if(treshholds != undefined && !useCookie)
 			{
 				var threshholds_split = treshholds.slice(0,-1).split("|");
 				for(var threshholdIndex in threshholds_split)
