@@ -39,6 +39,12 @@
         redraw(){
             let colorInputField = tmpl.querySelector('#color');
 
+            console.log(colorInputField);
+            console.log("lmfao");
+
+
+
+            /*
             var colorChoice;
 
             colorInputField.addEventListener('input', () =>{
@@ -50,7 +56,7 @@
                 console.log("kekw");
             }
             console.log("lmfao");
-            
+            */
         }
     });
 })();
