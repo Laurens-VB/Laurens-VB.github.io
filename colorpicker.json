@@ -1,56 +1,17 @@
 {
-    "id" : "STAGE_LVB_COLORPICKER",
-    "version" : "1.0.0",
-    "name" : "LVB Color Picker",
-    "description" : "Colorpicker",
-    "newInstancePrefix" : "ColorPicker",
-    "vendor" : "Laurens VB",
-    "webcomponents" : 
-    [
+    "name": "Colorpicker",
+	"description": "The first step in creating a minamilistic KPI tile",
+	"vendor": "Laurens VB",
+	"id": "com.sap.sample.helloworld1",
+	"newInstancePrefix": "colocpirkcer",
+	"version": "1.0.0",
+    "webcomponents": [
         {
-            "kind" : "main",
-            "tag" : "com-colorpicker",
-            "url" : "https://github.com/Laurens-VB/Laurens-VB.github.io/blob/main/colorpicker/colorpicker.js",
-            "integrity" : "",
+			"kind": "main",
+			"tag": "com-sap-sample-helloworld1",
+            "url": "https://raw.githubusercontent.com/Laurens-VB/Laurens-VB.github.io/dc7c76e9769f7504e28d799d4de26446df4f0fcc/colorpicker/colorpicker.js",
+            "integrity": "",
             "ignoreIntegrity" : true
         }
-    ],
-    "properties": 
-    {
-        "color" : 
-        {
-            "type" : "string",
-            "description" : "color",
-            "default" : "#90cf8a"
-        }
-	},
-    "methods": 
-    {
-        "getColor" :
-        {
-            "returnType" : "string",
-            "description" : "retourneert gekozen kleur",
-            "body" : "return this.color;"
-        },
-        "setColor" : 
-        {
-            "parameters" : 
-            [
-                {
-                    "name" : "color",
-                    "type" : "string",
-                    "description" : "new color"
-                }
-            ],
-            "description" : "set new color",
-            "body" : "this.color = color;"
-        }
-	},
-	"events": 
-    {
-        "onClick" :
-        {
-            "description" : "Wordt aangeroepen wnr de gebruiker de Gauge Box aanklikt"
-        }
-	}
+    ]
 }
