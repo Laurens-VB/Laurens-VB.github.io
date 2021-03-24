@@ -15,9 +15,11 @@
 
             
             this.$colorInputField = this._shadowRoot.querySelector('#color');
-            this.$kleur = '';
+            
             this.addEventListener("input", () => {
+                console.log("<><><><><><>");
                 console.log(this.$colorInputField.value);
+                console.log("<><><><><><>");
 			});
 		}
         
@@ -62,10 +64,6 @@
         }
 
         redraw(){
-
-            console.log("--------------------");
-            console.log(this.$kleur);
-            console.log("--------------------");
 
 
            /*
