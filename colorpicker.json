@@ -9,7 +9,7 @@
     [
         {
             "kind" : "main",
-            "tag" : "com-demo-gauge",
+            "tag" : "colorpicker",
             "url" : "https://github.com/Laurens-VB/Laurens-VB.github.io/blob/main/colorpicker/colorpicker.js",
             "integrity" : "",
             "ignoreIntegrity" : true
