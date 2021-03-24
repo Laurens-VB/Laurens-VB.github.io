@@ -1,0 +1,56 @@
+{
+    "id" : "STAGE_LVB_COLORPICKER",
+    "version" : "1.0.0",
+    "name" : "LVB Color Picker",
+    "description" : "Colorpicker",
+    "newInstancePrefix" : "ColorPicker",
+    "vendor" : "Laurens VB",
+    "webcomponents" : 
+    [
+        {
+            "kind" : "main",
+            "tag" : "com-demo-gauge",
+            "url" : "https://github.com/Laurens-VB/GaugeCustomWidgetTest/blob/main/colorpicker/colorpicker.js",
+            "integrity" : "",
+            "ignoreIntegrity" : true
+        }
+    ],
+    "properties": 
+    {
+        "color" : 
+        {
+            "type" : "string",
+            "description" : "color",
+            "default" : "#90cf8a"
+        }
+	},
+    "methods": 
+    {
+        "getColor" :
+        {
+            "returnType" : "string",
+            "description" : "retourneert gekozen kleur",
+            "body" : "return this.color;"
+        },
+        "setColor" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "color",
+                    "type" : "string",
+                    "description" : "new color"
+                }
+            ],
+            "description" : "set new color",
+            "body" : "this.color = color;"
+        }
+	},
+	"events": 
+    {
+        "onClick" :
+        {
+            "description" : "Wordt aangeroepen wnr de gebruiker de Gauge Box aanklikt"
+        }
+	}
+}
