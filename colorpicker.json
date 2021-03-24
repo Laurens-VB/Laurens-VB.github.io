@@ -1,6 +1,6 @@
 {
     "name": "Colorpicker",
-	"description": "The first step in creating a minamilistic KPI tile",
+	"description": "LVB Colorpicker",
 	"vendor": "Laurens VB",
 	"id": "com.sap.sample.helloworld1",
 	"newInstancePrefix": "colocpirkcer",
@@ -10,7 +10,7 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld1",
-            "url": "https://raw.githubusercontent.com/Laurens-VB/Laurens-VB.github.io/main/colorpicker/colorpicker.js",
+            "url": "https://github.com/Laurens-VB/Laurens-VB.github.io/blob/main/colorpicker/colorpicker.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }
