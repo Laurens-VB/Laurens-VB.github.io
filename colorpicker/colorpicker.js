@@ -12,6 +12,16 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
+
+            
+            this.$colorInputField = this._shadowRoot.querySelector('#color');
+
+            this.addEventListener("onChange", event => {
+				var event = new Event("onChange");
+				this.dispatchEvent(event);
+
+                console.log(this.$colorInputField.value);
+			});
 		}
         
 
@@ -33,25 +43,22 @@
                 this.redraw();
             }
 
-            this.$colorInputField = this._shadowRoot.querySelector('#color');
+
+            /*
 
             var color = "";
 
-            this.addEventListener("input", event => {
-				var event = new Event("input");
-				this.dispatchEvent(event);
 
-                color = this.$colorInputField.value;
-			});
+
+            console.log(color);
 
             oChangedProperties["color"] = color;
 
             if ("color" in oChangedProperties) {
 				this.$color = oChangedProperties["color"];
-                console.log("<><><><><><><><><><><>");
-                console.log(this.$color);
-                console.log("<><><><><><><><><><><>");
 			}
+
+            */
         }
         
         onCustomWidgetDestroy(){
