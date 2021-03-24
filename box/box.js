@@ -86,14 +86,11 @@
 
 			if(useCookie)
 			{
-				console.log("-----------------------------------");
 				var decodedCookie = decodeURIComponent(document.cookie);
 				decodedCookie = decodedCookie.slice(16);
 				console.log(decodedCookie);
 				var split_decoded_cookie = decodedCookie.split(",");
-				console.log("FOR LOOP");
 				for(var i in split_decoded_cookie){
-					console.log(split_decoded_cookie[i]);
 					var threshhold = split_decoded_cookie[i].split("->");
 
 					var waarde = threshhold[0];
@@ -103,10 +100,9 @@
 						this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + kleur + ';}.metric.participation text {fill: ' + kleur + ';}';
 					}
 				}
-				console.log("-----------------------------------");
 			}
 
-			if(treshholds != undefined && !useCookie)
+			if(treshholds != undefined)
 			{
 				var threshholds_split = treshholds.slice(0,-1).split("|");
 				for(var threshholdIndex in threshholds_split)
@@ -122,6 +118,9 @@
 
 				}
 				if(opslaan){
+					if(useCookie){
+						threshholds_split = decodeURIComponent(document.cookie).slice(16) + threshholds_split;
+					}
 					document.cookie = "SavedThreshhold=" + threshholds_split;
 					console.log("opgeslagen");
 				}
