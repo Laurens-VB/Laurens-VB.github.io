@@ -104,8 +104,8 @@
 
 				}
 				if(opslaan){
-					console.log("kekw");
-					opslaan(threshholds_split);
+					document.cookie = "SavedThreshhold=" + threshholds_split;
+					console.log("opgeslagen");;
 				}
 			}
 		}
@@ -154,11 +154,6 @@
 			}
 			
 			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$treshholds);
-		}
-
-		opslaan(threshold){
-			document.cookie = "SavedThreshhold=" + threshold;
-			console.log("opgeslagen");
 		}
 
 		/*
