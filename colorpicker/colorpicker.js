@@ -1,21 +1,16 @@
 (function()  {
-    let tmpl = document.createElement('template');
-    tmpl.innerHTML = ``;
+
+    let inputField = tmpl.createElement('input');
+    inputField.setAttribute('type', 'color');
+    inputField.setAttribute('id', 'color');
 
     customElements.define('com-colorpicker', class HelloWorld1 extends HTMLElement {
-
-        
-
 
 		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
-
-            let inputField = tmpl.createElement('input');
-            inputField.setAttribute('type', 'color');
-            inputField.setAttribute('id', 'color');
 		}
         
 
