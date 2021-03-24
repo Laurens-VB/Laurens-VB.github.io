@@ -88,8 +88,8 @@
 
 			if(treshholds != undefined)
 			{
-				//var threshholds_split = treshholds.slice(0,-1);
-				var threshholds_split = threshholds_split.split("|");
+				var threshholds_split = treshholds.slice(0,-1);
+				threshholds_split = threshholds_split.split("|");
 				for(var threshholdIndex in threshholds_split)
 				{
 					var threshhold = (threshholds_split[threshholdIndex]).split("->");
@@ -104,6 +104,7 @@
 				}
 
 				if(opslaan){
+					console.log("kekw");
 					opslaan(threshholds_split);
 				}
 			}
