@@ -39,17 +39,18 @@
 
         redraw(){
             this.$colorInputField = this._shadowRoot.querySelector('#color');
-            console.log(":00000000");
-            console.log(this.$colorInputField);
+
+            var color = "";
 
             this.addEventListener("input", event => {
 				var event = new Event("input");
 				this.dispatchEvent(event);
 
-                console.log( this.$colorInputField.value);
+                color = this.$colorInputField.value;
 			});
 
-           
+            console.log(color);
+            
            /*
             var color;
             console.log("so far so goodly");
