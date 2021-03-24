@@ -65,7 +65,13 @@
         "opslaan" : 
         {
             "type" : "boolean",
-            "description" : "opslaan",
+            "description" : "property om op te slaan",
+            "default" : false
+        },
+        "useCookie" : 
+        {
+            "type" : "boolean",
+            "description" : "property om de cookie te gebruiken",
             "default" : false
         },
         "width" : 
@@ -166,6 +172,25 @@
             ],
             "description" : "set opslaan",
             "body" : "this.opslaan = opslaan;"
+        },
+        "getUseCookie" :
+        {
+            "returnType" : "boolean",
+            "description" : "retourneert useCookie",
+            "body" : "return this.useCookie;"
+        },
+        "setUseCookie" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "useCookie",
+                    "type" : "boolean",
+                    "description" : "useCookie"
+                }
+            ],
+            "description" : "set useCookie",
+            "body" : "this.useCookie = useCookie;"
         }
 	},
 	"events": 
