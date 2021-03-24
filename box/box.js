@@ -88,6 +88,13 @@
 			{
 				var decodedCookie = decodeURIComponent(document.cookie);
 				decodedCookie = decodedCookie.slice(16);
+				if(treshholds != undefined){
+					var addToCookie =  treshholds.slice(0,-1).replace("|",",");
+					var decodedCookie = decodedCookie + addToCookie;
+					if(opslaan){
+						document.cookie = "SavedThreshhold="+ decodedCookie;
+					}
+				}
 				console.log(decodedCookie);
 				var split_decoded_cookie = decodedCookie.split(",");
 				for(var i in split_decoded_cookie){
@@ -105,12 +112,6 @@
 			if(treshholds != undefined)
 			{
 				var threshholds_split = treshholds.slice(0,-1).split("|");
-				if(useCookie){
-					threshholds_split = decodeURIComponent(document.cookie).slice(16).split(",") + threshholds_split;
-					for(var i in threshholds_split){
-						console.log(threshholds_split[i]);
-					}
-				}
 				for(var threshholdIndex in threshholds_split)
 				{
 					var threshhold = (threshholds_split[threshholdIndex]).split("->");
