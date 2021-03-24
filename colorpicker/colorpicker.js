@@ -4,7 +4,7 @@
         <h1>LAURENS HAIP</h1>
     `;
 
-    customElements.define('com-colorpicker', class HelloWorld1 extends HTMLElement {
+    customElements.define('com-colorpicker', class ColorPicker extends HTMLElement {
 
 
 		constructor() {
