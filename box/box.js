@@ -89,15 +89,17 @@
 				console.log("ik moet een cookie laden")
 				for (var cookie in document.cookie)
 				{	
-					if(cookie.startsWith("SavedThreshhold"))
+					if(cookie.startsWith("SavedThreshhold="))
 					{
-						var threshholds_split = treshholds.split(",");
+						var threshholds_split = treshholds.splice(0,16).split(",");
 						for(var threshholdIndex in threshholds_split)
 						{
 							var threshhold = (threshholds_split[threshholdIndex]).split("->");
 							
 							var waarde = threshhold[0];
+							console.log(waarde);
 							var kleur = threshhold[1];
+							console.log(kleur);
 
 							if(val >= waarde)
 							{
