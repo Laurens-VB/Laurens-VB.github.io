@@ -86,6 +86,7 @@
 
 			if(this.useCookie)
 			{
+				console.log("ik moet een cookie laden")
 				for (var cookie in document.cookie)
 				{	
 					if(cookie.startsWith("SavedThreshhold"))
@@ -104,6 +105,7 @@
 							}
 
 						}
+						console.log("-------------------------");
 					}
 				}
 				console.log(document.cookie);
