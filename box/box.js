@@ -89,6 +89,9 @@
 				var decodedCookie = decodeURIComponent(document.cookie);
 				decodedCookie = decodedCookie.slice(16);
 				if(treshholds != undefined){
+					console.log("<><><><><><>");
+					console.log(treshholds);
+					console.log("<><><><><><>");
 					var addToCookie =  treshholds.slice(0,-1).replace("|",",");
 					var decodedCookie = decodedCookie + addToCookie;
 					if(opslaan){
