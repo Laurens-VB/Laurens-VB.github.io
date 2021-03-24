@@ -19,7 +19,7 @@
             this.addEventListener("change", event => {
 				var event = new Event("change");
 				this.dispatchEvent(event);
-
+                console.log(":0000");
                 console.log(this.$colorInputField.value);
 			});
 		}
@@ -65,6 +65,15 @@
         }
 
         redraw(){
+
+            this.$colorInputField = this._shadowRoot.querySelector('#color');
+
+            this.addEventListener("change", event => {
+				var event = new Event("change");
+				this.dispatchEvent(event);
+                console.log("DDDDDD:");
+                console.log(this.$colorInputField.value);
+			});
 
 
            /*
