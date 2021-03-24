@@ -44,10 +44,10 @@
                 color = this.$colorInputField.value;
 			});
 
-            changedProperties["color"] = color;
+            oChangedProperties["color"] = color;
 
-            if ("color" in changedProperties) {
-				this.$color = changedProperties["color"];
+            if ("color" in oChangedProperties) {
+				this.$color = oChangedProperties["color"];
 			}
         }
         
