@@ -9,7 +9,7 @@
     [
         {
 			"kind": "main",
-			"tag": "com-colorpicker",
+			"tag": "com-com-sap-sample-helloworld1",
             "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
             "integrity": "",
             "ignoreIntegrity" : true
