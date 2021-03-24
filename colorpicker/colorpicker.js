@@ -1,55 +1,49 @@
-(function()
-{
-    let colorpickerHTML = document.createElement("colorpickerHTML");
-	colorpickerHTML.innerHTML = `
-		<form id="form">
-            <div>
-                <input type="color" id="color">
-            </div>
-		</form>
-	`;
+(function()  {
+    let tmpl = document.createElement('template');
+    tmpl.innerHTML = `
+        <h1>Hello World</h1>
+    `;
 
-    class Colorpicker2 extends HTMLElement 
-    {
-        constructor ()
-        {
-            super();
-            let shadowRoot = this.attachShadow({
-                mode: "open"
-            });
+    customElements.define('com-colorpicker', class HelloWorld1 extends HTMLElement {
 
-            shadowRoot.appendChild(colorpickerHTML.content.cloneNode(true));
 
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.dispatchEvent(event);
-            })
+		constructor() {
+			super(); 
+			this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+		}
 
-            this._props = {};
-
+        //Fired when the widget is added to the html DOM of the page
+        connectedCallback(){
         }
 
-        render(color)
-        {
-            colorChoice = colorpickerHTML.querySelector("#color");
-
-            colorChoice.addEventListener("keuzeKleur", () =>{
-                let kleur = colorChoice.value;
-                console.log("kleur" = kleur);
-                console.log("color" = color)
-
-            })
+         //Fired when the widget is removed from the html DOM of the page (e.g. by hide)
+        disconnectedCallback(){
+        
         }
 
-        onCustomWidgetAfterUpdate(changedProperties){
-            if("color" in changedProperties)
-            {
-                this.$color = changedProperties["color"];
-            }
+         //When the custom widget is updated, the Custom Widget SDK framework executes this function first
+		onCustomWidgetBeforeUpdate(oChangedProperties) {
 
-            this.render(this.$color);
+		}
+
+        //When the custom widget is updated, the Custom Widget SDK framework executes this function after the update
+		onCustomWidgetAfterUpdate(oChangedProperties) {
+            this.redraw();
         }
-    }
+        
+        //When the custom widget is removed from the canvas or the analytic application is closed
+        onCustomWidgetDestroy(){
+        }
 
-    customElements.define("com-colorpicker", Colorpicker2);
+        
+        //When the custom widget is resized on the canvas, the Custom Widget SDK framework executes the following JavaScript function call on the custom widget
+        // Commented out by default
+        /*
+        onCustomWidgetResize(width, height){
+        }
+        */
+
+        redraw(){}
+    });
 })();
