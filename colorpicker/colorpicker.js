@@ -4,16 +4,25 @@
         <input type="color" id="color">
     `;
 
-    customElements.define('com-colorpicker', class HelloWorld1 extends HTMLElement {
-
-        
-
+    customElements.define('com-colorpicker', class HelloWorld1 extends HTMLElement 
+    {
 
 		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
+
+            this.$colorInputField = shadowRoot.querySelector('#color');
+            console.log(":00000000");
+            console.log(this.$colorInputField);
+
+            this.addEventListener("input", event => {
+				var event = new Event("input");
+				this.dispatchEvent(event);
+
+                console.log( this.$colorInputField.value);
+			});
 		}
         
 
@@ -41,6 +50,8 @@
 
         redraw(){
 
+           
+           /*
             var color;
             console.log("so far so goodly");
             tmpl.addEventListener('input', () =>
@@ -51,6 +62,7 @@
 
             console.log(color);
             console.log("lmfao");
+            */
 
 
 
