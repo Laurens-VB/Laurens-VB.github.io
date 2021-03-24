@@ -84,14 +84,14 @@
 				this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text class="percentage" text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + rounded + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
 			}
 
-			if(this.useCookie)
+			if(useCookie)
 			{
 				console.log("ik moet een cookie laden")
 				for (var cookie in document.cookie)
 				{	
 					if(cookie.startsWith("SavedThreshhold="))
 					{
-						var threshholds_split = treshholds.splice(0,16).split(",");
+						var threshholds_split = cookie.splice(0,16).split(",");
 						console.log(threshholds_split);
 						for(var threshholdIndex in threshholds_split)
 						{
@@ -114,7 +114,7 @@
 				console.log(document.cookie);
 			}
 
-			if(treshholds != undefined && !this.useCookie)
+			if(treshholds != undefined && !useCookie)
 			{
 				var threshholds_split = treshholds.slice(0,-1).split("|");
 				for(var threshholdIndex in threshholds_split)
