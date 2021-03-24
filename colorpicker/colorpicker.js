@@ -40,9 +40,16 @@
         }
 
         redraw(){
-            let colorInputField = tmpl.querySelector('#color');
 
-            console.log(colorInputField);
+            var color;
+            console.log("so far so goodly");
+            tmpl.addEventListener('input', () =>
+            {
+                console.log("kekw")
+                color = tmpl.nodeValue;
+            })
+
+            console.log(color);
             console.log("lmfao");
 
 
