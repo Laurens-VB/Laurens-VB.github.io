@@ -9,7 +9,7 @@
 		</form>
 	`;
 
-    class Colorpicker extends HTMLElement 
+    class Colorpicker2 extends HTMLElement 
     {
         constructor ()
         {
@@ -48,5 +48,5 @@
         }
     }
 
-    customElements.define("com-colorpicker", Colorpicker);
+    customElements.define("com-colorpicker", Colorpicker2);
 })();
