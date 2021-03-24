@@ -88,11 +88,11 @@
 			{
 				console.log("-----------------------------------");
 				var decodedCookie = decodeURIComponent(document.cookie);
-				decodedCookie = decodedCookie.slice(0,16);
+				decodedCookie = decodedCookie.slice(16);
 				console.log(decodedCookie);
-				decodedCookie.split(",");
+				var split_decodedCookie = decodedCookie.split(",");
 				console.log("FOR LOOP");
-				for(var slicedCookie in decodedCookie){
+				for(var slicedCookie in split_decodedCookie){
 					console.log(slicedCookie);
 				}
 				console.log("-----------------------------------");
