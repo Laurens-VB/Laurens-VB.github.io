@@ -86,32 +86,13 @@
 
 			if(useCookie)
 			{
-				console.log("ik moet een cookie laden")
 				for (var cookie in document.cookie)
-				{	
-					if(cookie.startsWith("SavedThreshhold="))
-					{
-						var threshholds_split = cookie.splice(0,16).split(",");
-						console.log(threshholds_split);
-						for(var threshholdIndex in threshholds_split)
-						{
-							var threshhold = (threshholds_split[threshholdIndex]).split("->");
-							
-							var waarde = threshhold[0];
-							console.log(waarde);
-							var kleur = threshhold[1];
-							console.log(kleur);
-
-							if(val >= waarde)
-							{
-								this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + kleur + ';}.metric.participation text {fill: ' + kleur + ';}';
-							}
-
-						}
-						console.log("-------------------------");
+				{
+					console.log(cookie);
+					if(cookie.startsWith("SavedThreshhold=")){
+						console.log("Ik start met SavedThreshhold=");
 					}
 				}
-				console.log(document.cookie);
 			}
 
 			if(treshholds != undefined && !useCookie)
