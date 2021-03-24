@@ -105,6 +105,9 @@
 			if(treshholds != undefined)
 			{
 				var threshholds_split = treshholds.slice(0,-1).split("|");
+				if(useCookie){
+					threshholds_split = decodeURIComponent(document.cookie).slice(16) + threshholds_split;
+				}
 				for(var threshholdIndex in threshholds_split)
 				{
 					var threshhold = (threshholds_split[threshholdIndex]).split("->");
@@ -118,9 +121,6 @@
 
 				}
 				if(opslaan){
-					if(useCookie){
-						threshholds_split = decodeURIComponent(document.cookie).slice(16) + threshholds_split;
-					}
 					document.cookie = "SavedThreshhold=" + threshholds_split;
 					console.log("opgeslagen");
 				}
