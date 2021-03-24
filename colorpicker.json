@@ -9,8 +9,8 @@
     [
         {
 			"kind": "main",
-			"tag": "com-com-sap-sample-helloworld1",
-            "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
+			"tag": "com-sap-sample-helloworld1",
+            "url": "https://davidhstocker.github.io/SAC_CustomWidget_HelloWorld_1/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }
