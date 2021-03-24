@@ -93,14 +93,7 @@
 				var split_decodedCookie = decodedCookie.split(",");
 				console.log("FOR LOOP");
 				for(var i in split_decodedCookie){
-					var threshhold = split_decodedCookie[i].split("->");;
-
-					var waarde = threshhold[0];
-					var kleur = threshhold[1];
-
-					if(val >= waarde){
-						this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + kleur + ';}.metric.participation text {fill: ' + kleur + ';}';
-					}
+					console.log(split_decodedCookie[i]);
 				}
 				console.log("-----------------------------------");
 			}
