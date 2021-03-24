@@ -48,6 +48,9 @@
 
             if ("color" in oChangedProperties) {
 				this.$color = oChangedProperties["color"];
+                console.log("<><><><><><><><><><><>");
+                console.log(this.$color);
+                console.log("<><><><><><><><><><><>");
 			}
         }
         
