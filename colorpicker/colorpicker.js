@@ -16,10 +16,8 @@
             
             this.$colorInputField = this._shadowRoot.querySelector('#color');
             this.$kleur = '';
-            this.addEventListener("input", event => {
-				var event = new Event("input");
-				this.dispatchEvent(event);
-                this.$kleur = this.$colorInputField.value;
+            this.addEventListener("input", () => {
+                console.log(this.$colorInputField.value);
 			});
 		}
         
