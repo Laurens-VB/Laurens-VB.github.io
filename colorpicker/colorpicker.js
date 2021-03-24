@@ -48,5 +48,5 @@
         }
     }
 
-    customElements.define("colorPicker2", Colorpicker);
+    customElements.define("com-colorpicker", Colorpicker);
 })();
