@@ -87,7 +87,14 @@
 			if(useCookie)
 			{
 				console.log("-----------------------------------");
-				console.log(decodeURIComponent(document.cookie));
+				var decodedCookie = decodeURIComponent(document.cookie);
+				decodedCookie = decodedCookie.slice(0,16);
+				console.log(decodedCookie);
+				decodedCookie.split(",");
+				console.log("FOR LOOP");
+				for(slicedCookie in decodedCookie){
+					console.log(slicedCookie);
+				}
 				console.log("-----------------------------------");
 			}
 
