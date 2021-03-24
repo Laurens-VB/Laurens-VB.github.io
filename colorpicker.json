@@ -31,6 +31,19 @@
             "returnType" : "string",
             "description" : "retourneert kleur",
             "body" : "return this.color;"
+        },
+        "setColor":
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "color",
+                    "type" : "string",
+                    "description" : "set new color"
+                }
+            ],
+            "description" : "set test kleur",
+            "body" : "this.color = color;"
         }
 	},
 	"events": 
