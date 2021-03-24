@@ -1,47 +1,36 @@
-(function()
-{
-    let colorpickerHTML = document.createElement("colorpickerHTML");
-	colorpickerHTML.innerHTML = `
-        <h1>Hello World</h1>
-	`;
+(function()  {
+    let tmpl = document.createElement('template');
+    tmpl.innerHTML = `
+        <h1>LAURENS HAIP</h1>
+    `;
 
-    class Colorpicker extends HTMLElement 
-    {
-        constructor ()
-        {
-            super();
-            let shadowRoot = this.attachShadow(
-            {
-                mode: "open"
-            });
+    customElements.define('com-sap-sample-helloworld1', class HelloWorld1 extends HTMLElement {
 
-            shadowRoot.appendChild(colorpickerHTML.content.cloneNode(true));
 
-            this.addEventListener("click", event => {
-                var event = new Event("onClick");
-                this.dispatchEvent(event);
-            })
+		constructor() {
+			super(); 
+			this._shadowRoot = this.attachShadow({mode: "open"});
+            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+		}
 
-            this._props = {};
-
+        connectedCallback(){
         }
 
-        render(color)
-        {
-            colorChoice = colorpickerHTML.querySelector("#color");
-
-            colorChoice.addEventListener("keuzeKleur", () =>{
-                let kleur = colorChoice.value;
-                console.log("kleur" = kleur);
-                console.log("color" = color)
-
-            })
+        disconnectedCallback(){
+        
         }
 
-        onCustomWidgetAfterUpdate(changedProperties){
+		onCustomWidgetBeforeUpdate(oChangedProperties) {
+
+		}
+
+		onCustomWidgetAfterUpdate(oChangedProperties) {
             this.render();
         }
-    }
+        
+        onCustomWidgetDestroy(){
+        }
 
-    customElements.define("com-colorpicker", Colorpicker);
+        render(){}
+    });
 })();
