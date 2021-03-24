@@ -112,11 +112,6 @@
 
 				*/
 			}
-			else{
-				console.log("00000000000000pf");
-			}
-
-			console.log("render complete");
 		}
 		  
 		polar_to_cartesian(cx, cy, radius, angle) {
