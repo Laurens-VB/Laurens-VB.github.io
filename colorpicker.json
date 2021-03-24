@@ -5,7 +5,8 @@
 	"id": "com.sap.sample.helloworld1",
 	"newInstancePrefix": "colocpirkcer",
 	"version": "1.0.0",
-    "webcomponents": [
+    "webcomponents": 
+    [
         {
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld1",
@@ -13,5 +14,14 @@
             "integrity": "",
             "ignoreIntegrity" : true
         }
-    ]
+    ],
+    "properties": 
+    {
+	},
+	"methods": 
+    {
+	},
+	"events": 
+    {
+	}
 }
