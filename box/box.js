@@ -101,10 +101,10 @@
 					decodedCookie = decodedCookie + addToCookie;
 
 					console.log("<><><><><><>");
-					/*
+					
 					if(opslaan){
 						document.cookie = "SavedThreshhold="+ decodedCookie;
-					}*/
+					}
 				}
 				console.log(decodedCookie);
 				var split_decoded_cookie = decodedCookie.split(",");
