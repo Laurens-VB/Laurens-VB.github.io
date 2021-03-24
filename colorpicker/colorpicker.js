@@ -37,7 +37,14 @@
         }
 
         redraw(){
-            let colorChoice = tmpl.querySelector('#color');
+            let colorInputField = tmpl.querySelector('#color');
+
+            var colorChoice;
+
+            colorInputField.addEventListener('input', () =>{
+                colorChoice = colorInputField.nodeValue;
+            })
+
             if(colorChoice != undefined){
                 console.log(colorChoice);
                 console.log("kekw");
