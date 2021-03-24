@@ -34,8 +34,9 @@
             colorChoice = colorpickerHTML.querySelector("#color");
 
             colorChoice.addEventListener("keuzeKleur", () =>{
-                let color = colorChoice.value;
-                console.log(color);
+                let kleur = colorChoice.value;
+                console.log("kleur" = kleur);
+                console.log("color" = color)
 
             })
         }
