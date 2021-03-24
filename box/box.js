@@ -86,7 +86,9 @@
 
 			if(useCookie)
 			{
+				console.log("-----------------------------------");
 				console.log(decodeURIComponent(document.cookie));
+				console.log("-----------------------------------");
 			}
 
 			if(treshholds != undefined && !useCookie)
