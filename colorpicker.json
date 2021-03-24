@@ -10,7 +10,7 @@
         {
 			"kind": "main",
 			"tag": "com-sap-sample-helloworld1",
-            "url": "https://raw.githubusercontent.com/Laurens-VB/Laurens-VB.github.io/dc7c76e9769f7504e28d799d4de26446df4f0fcc/colorpicker/colorpicker.js",
+            "url": "https://davidhstocker.github.io/SAC_CustomWidget_HelloWorld_1/webcomponent.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }
