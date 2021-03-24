@@ -15,12 +15,12 @@
 
             
             this.$colorInputField = this._shadowRoot.querySelector('#color');
-
+            var counter = 0;
             this.addEventListener("input", event => {
 				var event = new Event("input");
 				this.dispatchEvent(event);
-                console.log(":0000");
-                console.log(this.$colorInputField.value);
+                counter = counter = 1;
+                console.log(counter);
 			});
 		}
         
