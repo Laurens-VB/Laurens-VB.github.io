@@ -73,7 +73,7 @@
 			this._props = {};
 		}
 		
-		render(val, info, color, colorMid, treshholds, opslaan) {
+		render(val, info, color, colorMid, treshholds) {
 			var val1 = val * 0.01;
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 			var rounded = Math.round( val * 10 ) / 10;
@@ -88,8 +88,7 @@
 
 			if(treshholds != undefined)
 			{
-				var threshholds_split = treshholds.slice(0,-1);
-				threshholds_split = threshholds_split.split("|");
+				var threshholds_split = treshholds.slice(0,-1).split("|");
 				for(var threshholdIndex in threshholds_split)
 				{
 					var threshhold = (threshholds_split[threshholdIndex]).split("->");
@@ -102,11 +101,17 @@
 					}
 
 				}
+				/*
 
 				if(opslaan){
 					console.log("kekw");
 					opslaan(threshholds_split);
 				}
+
+				*/
+			}
+			else{
+				console.log("00000000000000pf");
 			}
 
 			console.log("render complete");
@@ -150,12 +155,8 @@
 			if("treshholds" in changedProperties){
 				this.$treshholds = changedProperties["treshholds"];
 			}
-
-			if("opslaan" in changedProperties){
-				this.$treshholds = changedProperties["opslaan"];
-			}
 			
-			this.render(this.$value, this.$info, this.$color, this.$colorMid, this.$treshholds, this.$opslaan);
+			this.render(this.$value, this.$info, this.$color, this.$colorMid, this.$treshholds);
 		}
 
 		opslaan(threshold){
