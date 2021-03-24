@@ -4,7 +4,7 @@
         <input type="color" id="color">
     `;
 
-    customElements.define('com-colorpicker', class HelloWorld1 extends HTMLElement 
+    customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
 
 		constructor() {
@@ -32,12 +32,7 @@
             if (this._firstConnection){
                 this.redraw();
             }
-        }
-        
-        onCustomWidgetDestroy(){
-        }
 
-        redraw(){
             this.$colorInputField = this._shadowRoot.querySelector('#color');
 
             var color = "";
@@ -49,8 +44,19 @@
                 color = this.$colorInputField.value;
 			});
 
-            console.log(color);
-            
+            changedProperties["color"] = color;
+
+            if ("color" in changedProperties) {
+				this.$color = changedProperties["color"];
+			}
+        }
+        
+        onCustomWidgetDestroy(){
+        }
+
+        redraw(){
+
+
            /*
             var color;
             console.log("so far so goodly");
