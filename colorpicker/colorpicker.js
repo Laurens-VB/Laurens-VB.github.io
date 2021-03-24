@@ -13,7 +13,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            this.$colorInputField = shadowRoot.querySelector('#color');
+            this.$colorInputField = this._shadowRoot.querySelector('#color');
             console.log(":00000000");
             console.log(this.$colorInputField);
 
