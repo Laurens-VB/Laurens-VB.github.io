@@ -2,14 +2,14 @@
     "name": "Colorpicker",
 	"description": "LVB Colorpicker",
 	"vendor": "Laurens VB",
-	"id": "com.sap.sample.helloworld1",
+	"id": "LVB_COLOR_PICKER",
 	"newInstancePrefix": "colocpirkcer",
 	"version": "1.0.0",
     "webcomponents": 
     [
         {
 			"kind": "main",
-			"tag": "com-sap-sample-helloworld1",
+			"tag": "com-colorpicker",
             "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
             "integrity": "",
             "ignoreIntegrity" : true
