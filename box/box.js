@@ -86,17 +86,22 @@
 
 			if(useCookie)
 			{
-				console.log("----" + treshholds);
 				var decodedCookie = decodeURIComponent(document.cookie);
 				decodedCookie = decodedCookie.slice(16);
 				if(treshholds != undefined){
 					console.log("<><><><><><>");
-					console.log(treshholds);
-					console.log("<><><><><><>");
 					
+					
+					var addToCookie =  treshholds.slice(0,-1);
+					var addToCookie = addToCookie.replace("|",",");
+					var addToCookie = "," + addToCookie;
+
+					console.log(addToCookie);
+
+					decodedCookie = decodedCookie + addToCookie;
+
+					console.log("<><><><><><>");
 					/*
-					var addToCookie =  treshholds.slice(0,-1).replace("|",",");
-					var decodedCookie = decodedCookie + addToCookie;
 					if(opslaan){
 						document.cookie = "SavedThreshhold="+ decodedCookie;
 					}*/
