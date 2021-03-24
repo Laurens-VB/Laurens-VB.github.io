@@ -86,13 +86,7 @@
 
 			if(useCookie)
 			{
-				for (var cookie in document.cookie)
-				{
-					console.log(cookie);
-					if(cookie.startsWith("SavedThreshhold=")){
-						console.log("Ik start met SavedThreshhold=");
-					}
-				}
+				console.log(decodeURIComponent(document.cookie));
 			}
 
 			if(treshholds != undefined && !useCookie)
