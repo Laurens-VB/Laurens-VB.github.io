@@ -92,7 +92,7 @@
 				console.log(decodedCookie);
 				decodedCookie.split(",");
 				console.log("FOR LOOP");
-				for(slicedCookie in decodedCookie){
+				for(var slicedCookie in decodedCookie){
 					console.log(slicedCookie);
 				}
 				console.log("-----------------------------------");
