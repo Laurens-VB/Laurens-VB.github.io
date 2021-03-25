@@ -24,7 +24,7 @@
                 {
                     properties:
                     {
-                        color: this.$colorInputField.value;
+                        color: this.color
                     }
                 }
                 console.log("-.-");
@@ -72,39 +72,14 @@
         }
 
         redraw(){
-
-           /*
-            var color;
-            console.log("so far so goodly");
-            tmpl.addEventListener('input', () =>
-            {
-                console.log("kekw")
-                color = tmpl.nodeValue;
-            })
-
-            console.log(color);
-            console.log("lmfao");
-            */
-
-
-
-            /*
-            var colorChoice;
-
-            colorInputField.addEventListener('input', () =>{
-                colorChoice = colorInputField.nodeValue;
-            })
-
-            if(colorChoice != undefined){
-                console.log(colorChoice);
-                console.log("kekw");
-            }
-            console.log("lmfao");
-            */
         }
 
         get color(){
-            return this.$kleur;
+            return this._shadowRoot.querySelector('#color').value;
+        }
+
+        set color(kleur){
+            this._shadowRoot.querySelector('#color').value = color;
         }
     });
 })();
