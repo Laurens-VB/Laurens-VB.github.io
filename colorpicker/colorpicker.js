@@ -16,7 +16,7 @@
             
             this.$colorInputField = this._shadowRoot.querySelector('#color');
 
-            this.$kleur = "";
+            this.$kleur = '';
             this.addEventListener("input", () => {
                 this.$kleur = this.$colorInputField.value;
                 console.log(":(");
