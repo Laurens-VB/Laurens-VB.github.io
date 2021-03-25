@@ -19,6 +19,13 @@
             this.$kleur = '';
             this.addEventListener("input", () => {
                 this.$kleur = this.$colorInputField.value;
+                detail: 
+                {
+                    properties:
+                    {
+                        color: this.$colorInputField.value;
+                    }
+                }
 			});
 		}
         
@@ -63,7 +70,6 @@
         }
 
         redraw(){
-            console.log(this.$kleur);
 
            /*
             var color;
@@ -93,6 +99,10 @@
             }
             console.log("lmfao");
             */
+        }
+
+        get color(){
+            return this.$kleur;
         }
     });
 })();
