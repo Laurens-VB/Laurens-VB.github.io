@@ -19,6 +19,7 @@
             this.$kleur = "";
             this.addEventListener("input", () => {
                 this.$kleur = this.$colorInputField.value;
+                console.log(":(");
                 detail: 
                 {
                     properties:
@@ -26,6 +27,7 @@
                         color: this.$colorInputField.value;
                     }
                 }
+                console.log("-.-");
 			});
 		}
         
