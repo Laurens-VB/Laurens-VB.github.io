@@ -16,18 +16,15 @@
             
             this.$colorInputField = this._shadowRoot.querySelector('#color');
 
-            this.$kleur = '';
             this.addEventListener("input", () => {
-                this.$kleur = this.$colorInputField.value;
-                console.log(":(");
-                detail: 
+                var properties = {color : this.$colorInputField.value };
+                this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
-                    properties:
+                    detail: 
                     {
-                        color: this._shadowRoot.querySelector('#color').value;
+                        properties: properties
                     }
-                }
-                console.log("-.-");
+                }));
 			});
 		}
         
