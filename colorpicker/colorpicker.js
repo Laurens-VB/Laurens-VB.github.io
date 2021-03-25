@@ -24,7 +24,7 @@
                 {
                     properties:
                     {
-                        color: this.color
+                        color: this._shadowRoot.querySelector('#color').value;
                     }
                 }
                 console.log("-.-");
@@ -72,14 +72,6 @@
         }
 
         redraw(){
-        }
-
-        get color(){
-            return this._shadowRoot.querySelector('#color').value;
-        }
-
-        set color(kleur){
-            this._shadowRoot.querySelector('#color').value = color;
         }
     });
 })();
