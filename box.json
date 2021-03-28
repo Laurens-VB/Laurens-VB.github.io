@@ -83,6 +83,11 @@
         {
             "type" : "integer",
             "default" : 100
+        },
+        "data" :
+        {
+            "type" : "array",
+            "default" : []
         }
 	},
     "methods": 

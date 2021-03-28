@@ -47,23 +47,6 @@
             if (this._firstConnection){
                 this.redraw();
             }
-
-
-            /*
-
-            var color = "";
-
-
-
-            console.log(color);
-
-            oChangedProperties["color"] = color;
-
-            if ("color" in oChangedProperties) {
-				this.$color = oChangedProperties["color"];
-			}
-
-            */
         }
         
         onCustomWidgetDestroy(){
