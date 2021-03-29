@@ -89,7 +89,7 @@
 					teller = teller + value;
 				}
 
-				calculation = teller/noemer;
+				calculation = (teller/noemer) * 100;
 
 				console.log(teller + "/" + noemer + "=" + calculation);
 
