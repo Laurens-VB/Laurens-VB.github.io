@@ -85,7 +85,7 @@
 				var splitted_values = strValue.slice(0,-1).split("|");
 
 				for(var i in splitted_values){
-					var value = splitted_values[i];
+					var value = parseInt(splitted_values[i]);
 					teller = teller + value;
 				}
 
