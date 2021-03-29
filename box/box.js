@@ -90,7 +90,7 @@
 					teller = teller + value;
 				}
 
-				calculation = teller/totaal;
+				calculation = teller/noemer;
 
 				var val1 = calculation * 0.01;
 				var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
