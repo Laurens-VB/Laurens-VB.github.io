@@ -62,6 +62,12 @@
             "description" : "thresholds",
             "default" : "threshold"
         },
+        "stringValue":
+        {
+            "type" : "string",
+            "description" : "strValue",
+            "default" : ""
+        },
         "opslaan" : 
         {
             "type" : "boolean",
@@ -83,12 +89,6 @@
         {
             "type" : "integer",
             "default" : 100
-        },
-        "stringValue":
-        {
-            "type" : "string",
-            "description" : "strValue",
-            "default" : ""
         }
 	},
     "methods": 
@@ -198,13 +198,13 @@
             "description" : "set useCookie",
             "body" : "this.useCookie = useCookie;"
         },
-        "getStrValue":
+        "getStringValue" : 
         {
             "returnType" : "string",
-            "description" : "returned stringvalue",
-            "body": "return this.stringValue"
+            "description" : "retourneert stringValue",
+            "body" : "return this.stringValue;"
         },
-        "setStrValue" : 
+        "setStringValue" : 
         {
             "parameters" : 
             [
