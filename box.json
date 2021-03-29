@@ -83,6 +83,12 @@
         {
             "type" : "integer",
             "default" : 100
+        },
+        "stringValue":
+        {
+            "type" : "string",
+            "description" : "strValue",
+            "default" : ""
         }
 	},
     "methods": 
@@ -191,6 +197,25 @@
             ],
             "description" : "set useCookie",
             "body" : "this.useCookie = useCookie;"
+        },
+        "getStrValue":
+        {
+            "returnType" : "string",
+            "description" : "returned stringvalue",
+            "body": "return this.stringValue"
+        },
+        "setStrValue" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "strValue",
+                    "type" : "string",
+                    "description" : "strValue by | "
+                }
+            ],
+            "description" : "set strValue",
+            "body" : "this.stringValue = strValue;"
         }
 	},
 	"events": 

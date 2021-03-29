@@ -73,10 +73,18 @@
 			this._props = {};
 		}
 		
-		render(val, info, color, opslaan, useCookie, treshholds) {
-			var totaal = 44628887;
+		render(val, info, color, opslaan, useCookie, treshholds, strValue) {
+			var noemer = 44628887;
+			var teller = 0;
 
-			var calculation = val/totaal;
+			splitted_values = strValue.slice(0,-1).split("|");
+
+			for(var i in splitted_values){
+				var value = splitted_values[i];
+				teller = teller + value;
+			}
+
+			var calculation = teller/totaal;
 
 			var val1 = calculation * 0.01;
 			var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
@@ -193,8 +201,12 @@
 			if("useCookie" in changedProperties){
 				this.$useCookie = changedProperties["useCookie"];
 			}
+
+			if("stringValue" in changedProperties){
+				this.$stringValue = changedProperties["stringValue"];
+			}
 			
-			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$useCookie,this.$treshholds);
+			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$useCookie,this.$treshholds, this.$stringValue);
 		}
 
 		/*
