@@ -1,6 +1,6 @@
 {
     "id" : "SAC_Stage_Gauge",
-    "version" : "3.0.0",
+    "version" : "4.0.0",
     "name" : "Stage Gauge",
     "description" : "Gauge voor stage SAP Analytics Cloud COVID-19 HAnds-On Experience",
     "newInstancePrefix" : "Gauge",
@@ -66,6 +66,18 @@
         {
             "type" : "string",
             "description" : "strValue",
+            "default" : ""
+        },
+        "measureWaarde":
+        {
+            "type" : "number",
+            "description" : "measureWaarde",
+            "default" : ""
+        },
+        "compareTo":
+        {
+            "type" : "number",
+            "description" : "compareTo",
             "default" : ""
         },
         "opslaan" : 
@@ -216,6 +228,44 @@
             ],
             "description" : "set strValue",
             "body" : "this.stringValue = strValue;"
+        },
+        "getMeasureValue" : 
+        {
+            "returnType" : "number",
+            "description" : "retourneert measureValue",
+            "body" : "return this.measureWaarde;"
+        },
+        "setMeasureValue" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "measureValue",
+                    "type" : "number",
+                    "description" : " measureValue"
+                }
+            ],
+            "description" : "set strValue",
+            "body" : "this.measureWaarde = measureValue;"
+        },
+        "getCompareTo" : 
+        {
+            "returnType" : "number",
+            "description" : "retourneert compareTo",
+            "body" : "return this.compareTo;"
+        },
+        "setCompareTo" : 
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "compareTo",
+                    "type" : "number",
+                    "description" : " compareTo"
+                }
+            ],
+            "description" : "set strValue",
+            "body" : "this.compareTo = compareTo;"
         }
 	},
 	"events": 
