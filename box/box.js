@@ -230,7 +230,7 @@
 				this.$stringValue = changedProperties["stringValue"];
 			}
 			
-			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$useCookie,this.$treshholds, this.$stringValue);
+			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$useCookie,this.$treshholds, undefined);
 		}
 
 		/*
