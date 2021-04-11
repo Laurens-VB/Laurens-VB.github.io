@@ -75,7 +75,7 @@
 		
 		render(val, info, color, opslaan, useCookie, treshholds, strValue) {
 
-			var lmfaokekw = "xD KEKW";
+			var lmfaokekw = "xDKEKW";
 			var calculation = 0;
 
 			if(strValue != undefined){
