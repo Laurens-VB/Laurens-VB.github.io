@@ -57,7 +57,6 @@
 	`;
 
 	class Box extends HTMLElement {
-
 		constructor() {
 			super(); 
 			let shadowRoot = this.attachShadow({mode: "open"});
@@ -76,7 +75,7 @@
 		
 		render(val, info, color, opslaan, useCookie, treshholds, strValue) {
 
-			var dummyValue = 40000;
+			var lmfaokekw = "xDKEKW";
 			var calculation = 0;
 
 			if(strValue != undefined){
@@ -101,7 +100,7 @@
 				
 				if(rounded >=0 && rounded <=100) {
 					this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + color + ';}.metric.participation text {fill: ' + color + ';}';
-					this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + dummyValue + '</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
+					this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + lmfaokekw + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
 				}
 			}
 			else{
@@ -115,7 +114,7 @@
 				
 				if(rounded >=0 && rounded <=100) {
 					this.$style.innerHTML = ':host {border-radius: 10px;border-width: 2px;border-color: black;border-style: solid;display: block;}.body {background: #fff;}.metric {padding: 10%;}.metric svg {max-width: 100%;}.metric path {stroke-width: 75;stroke: #ecf0f1;fill: none;}.metric text {font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;}.metric.participation path.data-arc {stroke: ' + color + ';}.metric.participation text {fill: ' + color + ';}';
-					this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + dummyValue + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
+					this.$svg.innerHTML = '<path d="M 950 500 A 450 450 0 0 0 50 500"></path><text text-anchor="middle" alignment-baseline="middle" x="500" y="300" font-size="140" font-weight="bold">' + lmfaokekw + '%</text><text class="title" text-anchor="middle" alignment-baseline="middle" x="500" y="450" font-size="90" font-weight="normal">' + info + '</text><path d="' + x + '" class="data-arc"></path>"';
 				}
 			}
 
