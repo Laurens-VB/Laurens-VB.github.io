@@ -72,13 +72,13 @@
         {
             "type" : "number",
             "description" : "measureWaarde",
-            "default" : ""
+            "default" : 0
         },
         "compareTo":
         {
             "type" : "number",
             "description" : "compareTo",
-            "default" : ""
+            "default" : 0
         },
         "opslaan" : 
         {
