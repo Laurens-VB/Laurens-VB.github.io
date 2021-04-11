@@ -104,7 +104,7 @@
 			}
 			else{
 				console.log("strVat is Undefined");
-				var val1 = (val/compareTo) * 0.01;
+				var val1 = (measureValue/compareTo) * 0.01;
 				var x = this.svg_circle_arc_path(500, 500, 450, -90, val1 * 180.0 - 90);
 				var rounded = Math.round( val * 10 ) / 10;
 
