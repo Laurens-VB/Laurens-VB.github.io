@@ -84,7 +84,7 @@
 			var calculation = 0;
 
 			if(strValue != undefined){
-				var noemer = 44628887;
+				var noemer = compareTo;
 				var teller = 0;
 
 				var splitted_values = strValue.slice(0,-1).split('|');
