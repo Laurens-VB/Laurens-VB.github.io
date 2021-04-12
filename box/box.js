@@ -83,7 +83,8 @@
 
 			var calculation = 0;
 
-			if(strValue != undefined){
+			if(strValue != undefined)
+			{
 				var noemer = compareTo;
 				var teller = 0;
 
