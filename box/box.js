@@ -88,11 +88,15 @@
 				var noemer = compareTo;
 				var teller = 0;
 
-				var splitted_values = strValue.slice(0,-1).split('|');
+				if(strValue != "")
+				{
+					var splitted_values = strValue.slice(0,-1).split('|');
 
-				for(var i in splitted_values){
-					var value = parseInt(splitted_values[i]);
-					teller = teller + value;
+					for(var i in splitted_values)
+					{
+						var value = parseInt(splitted_values[i]);
+						teller = teller + value;
+					}
 				}
 
 				calculation = (teller/noemer) * 100;
