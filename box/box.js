@@ -90,7 +90,8 @@
 
 				if(strValue != "")
 				{
-					var splitted_values = strValue.slice(0,-1).split('|');
+					var splitted_values = strValue.slice(0,-1)
+						.split('|');
 
 					for(var i in splitted_values)
 					{
