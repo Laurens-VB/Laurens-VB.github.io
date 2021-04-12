@@ -250,7 +250,7 @@
 				this.$compareTo = changedProperties["compareTo"];
 			}
 			
-			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$useCookie,this.$treshholds, undefined, this.$measureWaarde, this.$compareTo);
+			this.render(this.$value, this.$info, this.$color, this.$opslaan, this.$useCookie,this.$treshholds, this.$stringValue, this.$measureWaarde, this.$compareTo);
 		}
 
 		/*
