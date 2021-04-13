@@ -1,5 +1,5 @@
 {
-    "name": "DAtepicker",
+    "name": "Datepicker",
 	"description": "LVB datepicker",
 	"vendor": "Laurens VB",
 	"id": "LVB_DATE_PICKER",
@@ -10,7 +10,7 @@
         {
 			"kind": "main",
 			"tag": "com-datepicker",
-            "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
+            "url": "https://laurens-vb.github.io/datepicker/datepicker.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }
