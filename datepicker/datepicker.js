@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <input type="type="date"" id="date">
+        <input type="date" id="date">
     `;
 
     customElements.define('com-datepicker', class DatePicker extends HTMLElement 
