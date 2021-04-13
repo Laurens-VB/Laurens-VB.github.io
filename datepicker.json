@@ -30,7 +30,7 @@
         {
             "returnType" : "string",
             "description" : "retourneert datum",
-            "body" : "return this.color;"
+            "body" : "return this.date;"
         },
         "setDate":
         {
