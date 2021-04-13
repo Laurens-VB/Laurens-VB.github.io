@@ -17,7 +17,9 @@
             this.$dateInputField = this._shadowRoot.querySelector('#date');
 
             this.addEventListener("input", () => {
-                var properties = {date : this.$dateInputField.value };
+                var properties = {
+                    date : this.$dateInputField.value 
+                };
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
