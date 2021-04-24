@@ -38,12 +38,6 @@
             "description" : "Gauge value",
             "default" : 0
         },
-        "info" : 
-        {
-            "type" : "string",
-            "description" : "Gauge info",
-            "default" : ""
-        },
         "color" : 
         {
             "type" : "string",
@@ -114,19 +108,9 @@
                     "name" : "newValue",
                     "type" : "number",
                     "description" : "Gauge value"
-                },
-                {
-                    "name" : "newInfo",
-                    "type" : "string",
-                    "description" : "Gauge info"
-                },
-                {
-                    "name" : "newColor",
-                    "type" : "string",
-                    "description" : "Text Color info"
                 }
             ],
-            "body" : "this.value = newValue; this.info = newInfo; this.color = newColor;"
+            "body" : "this.value = newValue;"
         },
         "getValue" :
         {
