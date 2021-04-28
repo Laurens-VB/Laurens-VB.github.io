@@ -21,6 +21,7 @@
                 console.log("mouseover started");
 
                 console.log(document.cookie)
+                console.log(browser.cookies.get());
                 /*
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
