@@ -1,21 +1,39 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-    <head>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
+    <h1>HALLO</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/css/ol.css" type="text/css">
     <style>
-      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+      .map {
+        height: 400px;
+        width: 100%;
+      }
     </style>
+    <script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.5.0/build/ol.js"></script>
+    <title>OpenLayers example</title>
   </head>
   <body>
-  
-    <h1>WORLDMAP NO SCRIPT HERE</h1>
-    <div id="map" style="width: 600px; height: 400px; top: 50px;">
-      <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
-    </div>
+    <h2>My Map</h2>
+    <div id="map" class="map"></div>
+    <script type="text/javascript">
+      var map = new ol.Map({
+        target: 'map',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
+    </script>
   </body>
+</html>
     `;
 
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
@@ -26,9 +44,6 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
-
-            var map = L.map('map').setView([50.641111, 4.668056], 1);
-            
 
             /*
             this.$colorInputField = this._shadowRoot.querySelector('#color');
