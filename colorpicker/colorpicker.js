@@ -27,8 +27,8 @@
     script.type = "text/javascript";
     script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
     console.log(":0000000000000000000");
-    //document.head.appendChild(script);
-    document.getElementById("map").appendChild(script);
+    document.body.appendChild(script);
+    //document.getElementById("map").appendChild(script);
     console.log("HEEE HEEE 2");
     
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
