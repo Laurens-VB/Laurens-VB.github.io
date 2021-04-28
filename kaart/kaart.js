@@ -20,6 +20,10 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
+                var string = "selectedLocation="+name;   
+                console.log(string);
+                document.cookie = string;
+
                 /*var cookieObj = document.cookie
                 .split(';')
                 .map(cookie => cookie.split('='))
