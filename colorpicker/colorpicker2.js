@@ -41,7 +41,7 @@
     </html>
     `;
 
-    customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
+    customElements.define('com-leafletMap', class LeafletMap extends HTMLElement 
     {
 
 		constructor() {
@@ -51,7 +51,7 @@
             this._firstConnection = false;
 
             
-            this.$colorInputField = this._shadowRoot.querySelector('#color');
+            /*this.$colorInputField = this._shadowRoot.querySelector('#color');
 
             this.addEventListener("input", () => {
                 var properties = {color : this.$colorInputField.value };
@@ -63,7 +63,7 @@
                     }
                 }));
                 
-			});
+			});*/
 		}
         
 
