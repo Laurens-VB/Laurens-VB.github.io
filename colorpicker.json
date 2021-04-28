@@ -4,7 +4,7 @@
 	"vendor": "Laurens VB",
 	"id": "LVB_COLOR_PICKER",
 	"newInstancePrefix": "colocpirkcer",
-	"version": "2.0.0",
+	"version": "3.0.0",
     "webcomponents": 
     [
         {
@@ -17,33 +17,33 @@
     ],
     "properties": 
     {
-        "color" : 
+        "selectedRegionISO2" : 
         {
             "type" : "string",
-            "description" : "color",
-            "default" : "#90cf8a"
+            "description" : "selectedRegionISO2",
+            "default" : ""
         }
 	},
 	"methods": 
     {
-        "getColor":
+        "getselectedRegionISO2":
         {
             "returnType" : "string",
             "description" : "retourneert kleur",
-            "body" : "return this.color;"
+            "body" : "return this.selectedRegionISO2;"
         },
-        "setColor":
+        "setselectedRegionISO2":
         {
             "parameters" : 
             [
                 {
-                    "name" : "color",
+                    "name" : "selectedRegionISO2",
                     "type" : "string",
-                    "description" : "set new color"
+                    "description" : "set new selectedRegionISO2"
                 }
             ],
-            "description" : "set test kleur",
-            "body" : "this.color = color;"
+            "description" : "set test selectedRegionISO2",
+            "body" : "this.selectedRegionISO2 = selectedRegionISO2;"
         }
 	},
 	"events": 

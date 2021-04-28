@@ -9,8 +9,8 @@
     [
         {
 			"kind": "main",
-			"tag": "com-leafletmap",
-            "url": "https://laurens-vb.github.io/leafletMap/leafletMap.js",
+			"tag": "com-kaart",
+            "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }
