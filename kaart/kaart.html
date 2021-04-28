@@ -28,9 +28,9 @@
       {
           L.marker([lat,lng]).addTo(map).on('click', () =>
           {
-              var string = "selectedLocation="+name;   
-              console.log(string);
-              document.cookie = string;
+              /*console.log(string);
+              document.cookie = string;*/
+              location.replace("https://laurens-vb.github.io/kaart/kaart.html?selectedLocation"+name)
           });
       }
   </script>
