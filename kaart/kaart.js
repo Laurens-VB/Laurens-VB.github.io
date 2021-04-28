@@ -20,19 +20,20 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
-                var cookieObj = document.cookie
+                /*var cookieObj = document.cookie
                 .split(';')
                 .map(cookie => cookie.split('='))
                 .reduce((accumulator, [key,value]) =>
                   ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
                 {});
-
+                */
+               
                 console.log("REEE");
-                console.log(cookieObj);
+                console.log(document.cookie);
 
-                console.log(cookieObj.selectedLocation);
+                //console.log(cookieObj.selectedLocation);
 
-                var properties = {selectedRegionISO2 : cookieObj.selectedLocation};
+                var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
