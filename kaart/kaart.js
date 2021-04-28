@@ -20,9 +20,7 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
-                console.log("plz plz plz");
-                console.log(window.location.search);
-                console.log("plz plz plz");
+                console.log(document.cookie)
                 /*
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
@@ -34,6 +32,7 @@
                 }));*/
             });
 
+            /*
             this.addEventListener("click", () =>{
                 console.log("click");
             });
@@ -45,6 +44,7 @@
             this.addEventListener("mousedown", () =>{
                 console.log("mousedown");
             });
+            */
 		}
         
 
