@@ -20,7 +20,7 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
-                var string = "selectedLocation="+name;   
+                var string = "selectedLocation="+"BE";   
                 console.log(string);
                 document.cookie = string;
 
