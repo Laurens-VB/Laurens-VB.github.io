@@ -25,7 +25,7 @@
 
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://laurens-vb.github.io/leafletMap/initiateLeaflet.js";
+    script.src = "initiateLeaflet.js";
     document.head.appendChild(script);
     console.log("HEEE HEEE 2");
 
