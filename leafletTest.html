@@ -29,7 +29,7 @@
       {
           L.marker([lat,lng]).addTo(map).on('click', () =>
           {
-              locations.addTo(name);
+              locations.push(name);
               console.log(name);
               console.log(locations);
           });
