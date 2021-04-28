@@ -25,7 +25,7 @@
     
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "initiateLeaflet.js";
+    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
     document.head.appendChild(script);
     console.log("HEEE HEEE 2");
     
