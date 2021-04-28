@@ -11,6 +11,7 @@
     <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
   </div>
   <script>
+    var locations = [];
     var map = L.map('map').setView([50.641111, 4.668056], 1);
     L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
       tileSize: 512,
@@ -28,7 +29,9 @@
       {
           L.marker([lat,lng]).addTo(map).on('click', () =>
           {
+              locations.addTo(name);
               console.log(name);
+              console.log(locations);
           });
       }
   </script>
