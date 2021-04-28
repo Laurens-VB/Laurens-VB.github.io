@@ -29,6 +29,7 @@
           L.marker([lat,lng]).addTo(map).on('click', () =>
           {
             document.cookie = "selectedLocation="+name+";secure";
+            window.parent.document.getElementById("H1").innerHTML = "XDDDD";
           });
       }
   </script>

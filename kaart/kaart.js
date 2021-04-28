@@ -1,6 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
+    <h1 id="H1">HALLO</h1>
     <iframe id = "embeddedHtml" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
     `;
 
