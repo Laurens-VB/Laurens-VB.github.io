@@ -11,34 +11,25 @@
   </head>
   <body>
   
-    <h1>WORLDMAP 6</h1>
+    <h1>WORLDMAP NO SCRIPT HERE</h1>
     <div id="map" style="width: 600px; height: 400px; top: 50px;">
       <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
+      <script src="https://laurens-vb.github.io/leafletMap/initiateLeaflet.js"> </script>
     </div>
   </body>
     `;
 
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
-		constructor() 
-        {
 
-
-            var map = L.map('map');
-
-            console.log("me neme is jef");
-            /*
+		constructor() {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-           // var map = this._shadowRoot.querySelector('#map');//.setView([50.641111, 4.668056], 1);
-
-            console.log(map);
-
-            
-           /* this.$colorInputField = this._shadowRoot.querySelector('#color');
+            /*
+            this.$colorInputField = this._shadowRoot.querySelector('#color');
 
             this.addEventListener("input", () => {
                 var properties = {color : this.$colorInputField.value };
@@ -51,8 +42,6 @@
                 }));
                 
 			});*/
-
-            console.log("plez werk")
 		}
         
 
