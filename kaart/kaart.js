@@ -1,10 +1,10 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
+        <h1>HALLO</h1>
     `;
 
-    customElements.define('com-kaart', class Kaart extends HTMLElement 
+    customElements.define('com-geomap', class geomap extends HTMLElement 
     {
 
 		constructor() {
@@ -14,21 +14,12 @@
             this._firstConnection = false;
 
             
-            this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
+            this.$dateInputField = this._shadowRoot.querySelector('#date');
 
-            this.addEventListener("mouseover", () =>{
-                console.log("mouseover started");
-
-                var cookieObj = document.cookie
-                .split(';')
-                .map(cookie => cookie.split('='))
-                .reduce((accumulator, [key,value]) =>
-                  ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
-                {});
-
-              console.log(cookieObj.selectedLocation);
-
-                var properties = {selectedRegionISO2 : cookieObj.selectedLocation};
+            this.addEventListener("input", () => {
+                var properties = {
+                    date : this.$dateInputField.value 
+                };
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
@@ -36,23 +27,8 @@
                         properties: properties
                     }
                 }));
-            });
-
-            this.addEventListener("click", () =>{
-                console.log("click");
-            });
-
-            this.addEventListener("mousemove", () =>{
-                console.log("mousemove");
-            });
-
-            this.addEventListener("mousedown", () =>{
-                console.log("mousedown");
-            });
-            
-
-
-            console.log(this.$embeddedHtml);
+                
+			});
 		}
         
 
@@ -62,6 +38,7 @@
         }
 
         disconnectedCallback(){
+        
         }
 
 		onCustomWidgetBeforeUpdate(oChangedProperties) {

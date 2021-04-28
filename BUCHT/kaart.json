@@ -1,0 +1,52 @@
+{
+    "name": "Datepicker",
+	"description": "LVB datepicker",
+	"vendor": "Laurens VB",
+	"id": "LVB_DATE_PICKER",
+	"newInstancePrefix": "colocpirkcer",
+	"version": "1.0.0",
+    "webcomponents": 
+    [
+        {
+			"kind": "main",
+			"tag": "com-kaart",
+            "url": "https://laurens-vb.github.io/kaart/kaart.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        }
+    ],
+    "properties": 
+    {
+        "date" : 
+        {
+            "type" : "string",
+            "description" : "date",
+            "default" : "13-04-2021"
+        }
+	},
+	"methods": 
+    {
+        "getDate":
+        {
+            "returnType" : "string",
+            "description" : "retourneert datum",
+            "body" : "return this.date;"
+        },
+        "setDate":
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "date",
+                    "type" : "string",
+                    "description" : "set new date"
+                }
+            ],
+            "description" : "set test kleur",
+            "body" : "this.date = date;"
+        }
+	},
+	"events": 
+    {
+	}
+}

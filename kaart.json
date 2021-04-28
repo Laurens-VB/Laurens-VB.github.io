@@ -1,15 +1,15 @@
 {
-    "name": "Datepicker",
-	"description": "LVB datepicker",
+    "name": "Kaart",
+	"description": "LVB Kaart",
 	"vendor": "Laurens VB",
-	"id": "LVB_DATE_PICKER",
-	"newInstancePrefix": "colocpirkcer",
+	"id": "LVB_KAART",
+	"newInstancePrefix": "Kaart",
 	"version": "1.0.0",
     "webcomponents": 
     [
         {
 			"kind": "main",
-			"tag": "com-kaart",
+			"tag": "com-geomap",
             "url": "https://laurens-vb.github.io/kaart/kaart.js",
             "integrity": "",
             "ignoreIntegrity" : true
@@ -17,33 +17,33 @@
     ],
     "properties": 
     {
-        "date" : 
+        "selectedRegionISO2" : 
         {
             "type" : "string",
-            "description" : "date",
-            "default" : "13-04-2021"
+            "description" : "selectedRegionISO2",
+            "default" : ""
         }
 	},
 	"methods": 
     {
-        "getDate":
+        "getselectedRegionISO2":
         {
             "returnType" : "string",
-            "description" : "retourneert datum",
-            "body" : "return this.date;"
+            "description" : "retourneert kleur",
+            "body" : "return this.selectedRegionISO2;"
         },
-        "setDate":
+        "setselectedRegionISO2":
         {
             "parameters" : 
             [
                 {
-                    "name" : "date",
+                    "name" : "selectedRegionISO2",
                     "type" : "string",
-                    "description" : "set new date"
+                    "description" : "set new selectedRegionISO2"
                 }
             ],
-            "description" : "set test kleur",
-            "body" : "this.date = date;"
+            "description" : "set test selectedRegionISO2",
+            "body" : "this.selectedRegionISO2 = selectedRegionISO2;"
         }
 	},
 	"events": 
