@@ -11,7 +11,7 @@
   </head>
   <body>
   
-    <h1>WORLDMAP 3</h1>
+    <h1>WORLDMAP 4</h1>
     <div id="map" style="width: 600px; height: 400px; top: 50px;">
       <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
@@ -24,7 +24,9 @@
 		constructor() 
         {
             console.log("me neme is jef");
-  
+            
+            var map = L.map('map').setView([50.641111, 4.668056], 1);
+
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
