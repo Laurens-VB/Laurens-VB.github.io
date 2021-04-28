@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <embed type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="500" height="200">
+        <embed type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
     `;
 
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
