@@ -29,9 +29,7 @@
     document.head.appendChild(script);
     console.log("HEEE HEEE 2");
     */
-    customElements.define('com-colorpicker', ColorPicker)
-    
-    class ColorPicker extends HTMLElement 
+    customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
 
 		constructor() {
@@ -85,5 +83,5 @@
 
         redraw(){
         }
-    };
+    });
 })();
