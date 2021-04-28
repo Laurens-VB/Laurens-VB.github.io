@@ -1,16 +1,16 @@
 {
-    "name": "GoogleMaps",
-	"description": "LVB GoogleMaps",
+    "name": "Leafletmap",
+	"description": "LVB leafletMap",
 	"vendor": "Laurens VB",
-	"id": "googleMaps",
-	"newInstancePrefix": "googleMaps",
+	"id": "leafletmap",
+	"newInstancePrefix": "leafletmap",
 	"version": "1.0.0",
     "webcomponents": 
     [
         {
 			"kind": "main",
-			"tag": "com-colorpicker",
-            "url": "https://laurens-vb.github.io/googleMaps/googleMaps.js",
+			"tag": "com-leafletmap",
+            "url": "https://laurens-vb.github.io/leafletMap/leafletMap.js",
             "integrity": "",
             "ignoreIntegrity" : true
         }
