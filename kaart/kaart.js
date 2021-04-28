@@ -17,7 +17,7 @@
             this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
             this.addEventListener("mouseover", () =>{
-                console.log(this.$embeddedHtml.baseURI);
+                console.log(document.cookie);
 
                 
 
