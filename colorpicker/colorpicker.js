@@ -18,16 +18,19 @@
     </body>
     `;
 
-    customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
+    var headScript = document.createElement("script");
+    headScript.type = "text/javascript";
+    headScript.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
+    document.head.appendChild(headScript);
+    console.log("HEEE HEEE");
+
+    customElements.define('com-colorpicker', ColorPicker)
+    
+    class ColorPicker extends HTMLElement 
     {
 
 		constructor() {
-            var headScript = document.createElement("script");
-            headScript.type = "text/javascript";
-            headScript.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
-            document.head.appendChild(headScript);
-
-            console.log("HEEE HEEE");
+            
 
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
@@ -77,5 +80,5 @@
 
         redraw(){
         }
-    });
+    };
 })();
