@@ -16,11 +16,11 @@
             
             this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
-            console.log(this.$embeddedHtml);
+            this.$embeddedHtml.addEventListener("click", () =>{
+                console.log("yeeyeyeyeye")
+            })
 
-            this.addEventListener("onstorage", () => {
-                console.log("plz plz plz do something :'(");
-			})
+            console.log(this.$embeddedHtml);
 		}
         
 
