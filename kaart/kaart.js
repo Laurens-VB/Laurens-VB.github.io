@@ -20,26 +20,10 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
-                var string = "selectedLocation2="+"BE";   
-                console.log(string);
-                document.cookie = string;
-
-                /*var cookieObj = document.cookie
-                .split(';')
-                .map(cookie => cookie.split('='))
-                .reduce((accumulator, [key,value]) =>
-                  ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
-                {});
-                */
-            
+                console.log("plz plz plz");
+                console.log(window.location.search);
+                console.log("plz plz plz");
                 /*
-                console.log("REEE");
-                console.log(document.cookie);
-                console.log("AAAP");
-                */
-
-                console.log(document.cookie);
-
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
@@ -47,7 +31,7 @@
                     {
                         properties: properties
                     }
-                }));
+                }));*/
             });
 
             this.addEventListener("click", () =>{
