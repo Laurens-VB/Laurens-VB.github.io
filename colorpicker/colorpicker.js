@@ -2,22 +2,24 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
     <head>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
-    <style>
-      #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
+  <style>
+    #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
+  </style>
+</head>
+<body>
+
+  <h1>WORLDMAP</h1>
+  <div id="map" style="width: 600px; height: 400px; top: 50px;">
     <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     <script>
       var map = L.map('map').setView([50.641111, 4.668056], 1);
       L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
         tileSize: 512,
         zoomOffset: -1,
-        minZoom: 5,
+        minZoom: 0,
         attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
         crossOrigin: true
       }).addTo(map);
@@ -25,7 +27,7 @@
         addMarkerToMap(50.641111,4.668056,"BE",map);
         addMarkerToMap(51,10,"DE",map);
         addMarkerToMap(47,2,"FR",map);
-
+  
       function addMarkerToMap(lat,lng,name,map)
         {
             L.marker([lat,lng]).addTo(map).on('click', () =>
@@ -33,9 +35,10 @@
                 console.log(name);
             });
         }
-
+  
     </script>
-  </body>
+  </div>
+</body>
     `;
 
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
