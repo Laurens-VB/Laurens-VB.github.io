@@ -15,12 +15,21 @@
             this._firstConnection = false;
 
             
-            this.$dateInputField = this._shadowRoot.querySelector('#date');
+            this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
-            this.addEventListener("input", () => {
-                var properties = {
-                    date : this.$dateInputField.value 
-                };
+            this.addEventListener("mouseover", () =>{
+                console.log("mouseover started");
+
+                var cookieObj = document.cookie
+                .split(';')
+                .map(cookie => cookie.split('='))
+                .reduce((accumulator, [key,value]) =>
+                  ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
+                {});
+
+              console.log(cookieObj.selectedLocation);
+
+                var properties = {selectedRegionISO2 : cookieObj.selectedLocation};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
@@ -28,8 +37,19 @@
                         properties: properties
                     }
                 }));
-                
-			});
+            });
+
+            this.addEventListener("click", () =>{
+                console.log("click");
+            });
+
+            this.addEventListener("mousemove", () =>{
+                console.log("mousemove");
+            });
+
+            this.addEventListener("mousedown", () =>{
+                console.log("mousedown");
+            });
 		}
         
 
