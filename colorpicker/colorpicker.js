@@ -28,6 +28,11 @@
                 console.log("mousemove");
             });
 
+            this.addEventListener("mousedown", () =>{
+                console.log("mousedown");
+            });
+            
+
 
             console.log(this.$embeddedHtml);
 		}
