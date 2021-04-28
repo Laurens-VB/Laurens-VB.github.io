@@ -1,7 +1,7 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
+    <iframe id = "embeddedHtml" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
     `;
 
     customElements.define('com-geomap', class geomap extends HTMLElement 
