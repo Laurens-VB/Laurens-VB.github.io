@@ -14,6 +14,10 @@
             this._firstConnection = false;
 
             
+            listenCookieChange(({oldValue, newValue})=> {
+                console.log(`Cookie changed from "${oldValue}" to "${newValue}"`);
+              }, 1000);
+
             this.addEventListener("onstorage", () => {
                 console.log("plz plz plz do something :'(");
 			})
@@ -43,5 +47,20 @@
 
         redraw(){
         }
+
+        listenCookieChange(callback, interval = 1000) {
+            let lastCookie = document.cookie;
+            setInterval(()=> {
+              let cookie = document.cookie;
+              if (cookie !== lastCookie) {
+                  console.log(":00000000000");
+                try {
+                  callback({oldValue: lastCookie, newValue: cookie});
+                } finally {
+                  lastCookie = cookie;
+                }
+              }
+            }, interval);
+          }
     });
 })();
