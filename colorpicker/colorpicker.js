@@ -1,13 +1,9 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <embed type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
+        <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
     `;
-
-    tmpl.addEventListener("onClicked", () =>{
-        console.log("HMMMMMMMMM");
-    })
-
+    
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
 
@@ -17,6 +13,11 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
+            console.log("----------");
+            console.log(document.getElementById("embeddedHtml"));
+            console.log("----------");
+
+            /*
             this.addEventListener("onClicked", () => {
                 /*var properties = {color : this.$colorInputField.value };
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
@@ -25,10 +26,10 @@
                     {
                         properties: properties
                     }
-                }));*/
+                }));
                 console.log("HEEE HEEE HEEE HAAA HAAA HAAA HOO HOOO HOOO");
                 console.log("REEEEEEE");
-			})
+			})*/
 		}
         
 
