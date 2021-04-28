@@ -27,13 +27,12 @@
     leafletPackage.src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js";
     document.head.appendChild(leafletPackage);
 
-
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = () => {console.log("WHYYYYYYYYYYYY")}
-
+    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
     document.body.appendChild(script);
     //document.getElementById("map").appendChild(script);
+
     
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
