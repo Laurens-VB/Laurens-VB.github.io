@@ -2,7 +2,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
         <h1>HALLO</h1>
-        <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
+        <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
     `;
 
     customElements.define('com-geomap', class geomap extends HTMLElement 

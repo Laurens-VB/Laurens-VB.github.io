@@ -31,16 +31,6 @@
               
               console.log(name);
               document.cookie = "selectedLocation="+name;
-              console.log("bruh");
-
-              var cookieObj = document.cookie
-                .split(';')
-                .map(cookie => cookie.split('='))
-                .reduce((accumulator, [key,value]) =>
-                  ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
-                {});
-
-              console.log(cookieObj.selectedLocation);
           });
       }
   </script>
