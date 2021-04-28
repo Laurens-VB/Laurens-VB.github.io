@@ -23,13 +23,10 @@
     document.head.appendChild(headScript);
     console.log("leaflet loaded");
 
-    /*
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = ""
-    document.body.appendChild(script);*/
-    //document.getElementById("map").appendChild(script);
-
+    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
+    document.body.appendChild(script);
     
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
