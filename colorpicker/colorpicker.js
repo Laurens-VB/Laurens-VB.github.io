@@ -35,20 +35,57 @@
         connectedCallback(){
             this._firstConnection = true;
             this.redraw();
+
+            var cookieObj = document.cookie
+                .split(';')
+                .map(cookie => cookie.split('='))
+                .reduce((accumulator, [key,value]) =>
+                    ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
+                {});
+        
+            console.log("callbackConnected")
+            console.log(cookieObj.selectedLocation);
         }
 
         disconnectedCallback(){
+            var cookieObj = document.cookie
+                .split(';')
+                .map(cookie => cookie.split('='))
+                .reduce((accumulator, [key,value]) =>
+                    ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
+                {});
+        
+            console.log("disconnectedCallback")
+            console.log(cookieObj.selectedLocation);
         
         }
 
 		onCustomWidgetBeforeUpdate(oChangedProperties) {
-
+            var cookieObj = document.cookie
+                .split(';')
+                .map(cookie => cookie.split('='))
+                .reduce((accumulator, [key,value]) =>
+                    ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
+                {});
+        
+            console.log("beforeUpdate")
+            console.log(cookieObj.selectedLocation);
 		}
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
                 this.redraw();
             }
+
+            var cookieObj = document.cookie
+                .split(';')
+                .map(cookie => cookie.split('='))
+                .reduce((accumulator, [key,value]) =>
+                    ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
+                {});
+        
+            console.log("afterUpdate")
+            console.log(cookieObj.selectedLocation);
         }
         
         onCustomWidgetDestroy(){
