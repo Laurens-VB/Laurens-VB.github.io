@@ -16,17 +16,18 @@
             
             this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
-            this.$embeddedHtml.addEventListener("click", () =>{
-                console.log("yeeyeyeyeye");
+            this.addEventListener("mouseover", () =>{
+                console.log("mouseover");
             });
 
             this.addEventListener("click", () =>{
-                console.log("EHEHEHEHEHEH");
+                console.log("click");
             });
 
-            this.addEventListener("mouseover", () =>{
-                console.log("AHAAHAHAHHAAH");
+            this.addEventListener("mousemove", () =>{
+                console.log("mousemove");
             });
+
 
             console.log(this.$embeddedHtml);
 		}
