@@ -1,0 +1,52 @@
+{
+    "name": "GoogleMaps",
+	"description": "LVB GoogleMaps",
+	"vendor": "Laurens VB",
+	"id": "googleMaps",
+	"newInstancePrefix": "googleMaps",
+	"version": "1.0.0",
+    "webcomponents": 
+    [
+        {
+			"kind": "main",
+			"tag": "com-colorpicker",
+            "url": "https://laurens-vb.github.io/googleMaps/googleMaps.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        }
+    ],
+    "properties": 
+    {
+        "selectedRegionISO2" : 
+        {
+            "type" : "string",
+            "description" : "Geselecteerde regio in ISO2 formaat.",
+            "default" : ""
+        }
+	},
+	"methods": 
+    {
+        "getSelectedRegionISO2":
+        {
+            "returnType" : "string",
+            "description" : "retourneert geselecteerde regio",
+            "body" : "return this.selectedRegionISO2;"
+        },
+        "setSelectedRegionISO2":
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "selectedRegionISO2",
+                    "type" : "string",
+                    "description" : "stel nieuwe geselecteerde regio in"
+                }
+            ],
+            "description" : "set geselecteerde regio",
+            "body" : "this.selectedRegionISO2 = selectedRegionISO2;"
+        }
+	},
+	"events": 
+    {
+	}
+}
