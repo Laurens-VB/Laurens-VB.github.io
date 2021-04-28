@@ -19,43 +19,15 @@
 
     var headScript = document.createElement("script");
     headScript.type = "text/javascript";
-    headScript.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
+    headScript.src = "https://laurens-vb.github.io/leaflet/leaflet.js";
     document.head.appendChild(headScript);
-    
-    var leafletPackage = document.createElement("script");
-    leafletPackage.type = "text/javascript";
-    leafletPackage.src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js";
-    document.head.appendChild(leafletPackage);
+    console.log("leaflet loaded");
 
+    /*
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.appendChild(document.createTextNode(`
-        console.log("mjef me name");
-
-        var map = L.map('map').setView([50.641111, 4.668056], 1);
-        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
-        tileSize: 512,
-        zoomOffset: -1,
-        minZoom: 0,
-        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-        crossOrigin: true
-        }).addTo(map);
-            
-        addMarkerToMap(50.641111,4.668056,"BE",map);
-        addMarkerToMap(51,10,"DE",map);
-        addMarkerToMap(47,2,"FR",map);
-    
-        function addMarkerToMap(lat,lng,name,map)
-        {
-            L.marker([lat,lng]).addTo(map).on('click', () =>
-            {
-                console.log(name);
-            });
-        }
-    
-        console.log("HET ZOU MOETEN WERKEN");`
-    ));
-    document.body.appendChild(script);
+    script.src = ""
+    document.body.appendChild(script);*/
     //document.getElementById("map").appendChild(script);
 
     
