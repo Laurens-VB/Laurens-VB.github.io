@@ -17,7 +17,10 @@
             this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
             this.addEventListener("mouseover", () =>{
-                console.log(window.location.href);
+                console.log(this.$embeddedHtml.baseURI);
+
+                
+
                 /*
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
