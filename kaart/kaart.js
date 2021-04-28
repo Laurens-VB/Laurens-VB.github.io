@@ -19,7 +19,7 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
-                console.log(document.cookie)
+                console.log(document.getElementById("H1").innerHTML);
                 /*
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
