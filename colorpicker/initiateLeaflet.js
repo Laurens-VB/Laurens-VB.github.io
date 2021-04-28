@@ -1,3 +1,5 @@
+import * as L from 'https://laurens-vb.github.io/node_modules/leaflet/Leaflet.js';
+
 console.log("mjef me name");
 
 var map = L.map('map').setView([50.641111, 4.668056], 1);
