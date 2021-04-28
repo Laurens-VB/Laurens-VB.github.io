@@ -14,9 +14,9 @@
             this._firstConnection = false;
 
             
-            listenCookieChange(({oldValue, newValue})=> {
-                console.log(`Cookie changed from "${oldValue}" to "${newValue}"`);
-              }, 1000);
+            this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
+
+            console.log(this.$embeddedHtml);
 
             this.addEventListener("onstorage", () => {
                 console.log("plz plz plz do something :'(");
