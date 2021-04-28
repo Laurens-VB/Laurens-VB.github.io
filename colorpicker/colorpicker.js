@@ -21,21 +21,19 @@
     headScript.type = "text/javascript";
     headScript.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
     document.head.appendChild(headScript);
-    console.log("HEEE HEEE");
     
     var leafletPackage = document.createElement("script");
     leafletPackage.type = "text/javascript";
     leafletPackage.src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js";
     document.head.appendChild(leafletPackage);
-    console.log("HEEE HEEE 9");
+
 
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
-    console.log(":0000000000000000000");
+    script.src = () => {console.log("WHYYYYYYYYYYYY")}
+
     document.body.appendChild(script);
     //document.getElementById("map").appendChild(script);
-    console.log("HEEE HEEE 2");
     
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
