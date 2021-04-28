@@ -44,12 +44,6 @@
             ],
             "description" : "set test kleur",
             "body" : "this.color = color;"
-        },
-        "getCookie":
-        {
-            "returnType" : "string",
-            "description" : "retourneert kleur",
-            "body" : "return document.cookie.split(';').map(cookie => cookie.split('=')).reduce((accumulator, [key,value]) =>({...accumulator, [key.trim()]: decodeURIComponent(value) }),{}).selectedLocation;"
         }
 	},
 	"events": 

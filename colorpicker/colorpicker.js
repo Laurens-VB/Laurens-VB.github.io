@@ -4,7 +4,7 @@
         <embed type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
     `;
 
-    tmpl.addEventListener("onclick", () =>{
+    tmpl.addEventListener("onClicked", () =>{
         console.log("HMMMMMMMMM");
     })
 
@@ -17,7 +17,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            this.addEventListener("onclick", () => {
+            this.addEventListener("onClicked", () => {
                 /*var properties = {color : this.$colorInputField.value };
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
