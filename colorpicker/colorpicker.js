@@ -4,6 +4,10 @@
         <embed type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
     `;
 
+    tmpl.addEventListener("click", () =>{
+        console.log("HMMMMMMMMM");
+    })
+
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
 
@@ -13,7 +17,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            this.addEventListener("click", () => {
+            /*this.addEventListener("click", () => {
                 /*var properties = {color : this.$colorInputField.value };
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
@@ -21,10 +25,10 @@
                     {
                         properties: properties
                     }
-                }));*/
+                }));
                 console.log("HEEE HEEE HEEE HAAA HAAA HAAA HOO HOOO HOOO");
                 console.log("REEEEEEE");
-			});
+			})*/
 		}
         
 
