@@ -7,7 +7,6 @@
   </style>
 </head>
 <body>
-  <h1 id="H1"></h1>
   <div id="map">
     <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
   </div>
@@ -29,7 +28,7 @@
       {
           L.marker([lat,lng]).addTo(map).on('click', () =>
           {
-            document.getElementById("H1").innerHTML = name;
+            document.cookie = "selectedLocation="+name;
           });
       }
   </script>
