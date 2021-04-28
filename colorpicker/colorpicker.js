@@ -17,16 +17,18 @@
     </body>
     `;
 
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
+    document.body.appendChild(script);
+
     var headScript = document.createElement("script");
     headScript.type = "text/javascript";
     headScript.src = "https://laurens-vb.github.io/leaflet/leaflet.js";
     document.head.appendChild(headScript);
     console.log("leaflet loaded");
 
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
-    document.body.appendChild(script);
+
     
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {

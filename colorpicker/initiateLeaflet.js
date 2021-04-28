@@ -1,4 +1,4 @@
-import * as L from 'https://laurens-vb.github.io/node_modules/leaflet/Leaflet.js';
+//import * as L from 'https://laurens-vb.github.io/node_modules/leaflet/Leaflet.js';
 
 console.log("mjef me name");
 
