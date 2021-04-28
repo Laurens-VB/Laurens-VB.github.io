@@ -30,6 +30,7 @@
                
                 console.log("REEE");
                 console.log(document.cookie);
+                console.log("AAAP");
 
                 //console.log(cookieObj.selectedLocation);
 
