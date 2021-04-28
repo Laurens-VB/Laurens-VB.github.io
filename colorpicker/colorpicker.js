@@ -4,7 +4,6 @@
     <head>
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
     <style>
         #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
     </style>
@@ -23,6 +22,13 @@
     {
 
 		constructor() {
+            var headScript = document.createElement("script");
+            headScript.type = "text/javascript";
+            headScript.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
+            document.head.appendChild(headScript);
+
+            console.log("HEEE HEEE");
+
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
@@ -42,6 +48,8 @@
                 }));
                 
 			});*/
+
+            console.log("ZAWARDO");
 		}
         
 
