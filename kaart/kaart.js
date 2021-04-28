@@ -1,7 +1,6 @@
 (function()  {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-        <h1>HALLO</h1>
         <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
     `;
 
