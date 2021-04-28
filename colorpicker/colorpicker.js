@@ -22,13 +22,13 @@
     headScript.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
     document.head.appendChild(headScript);
     console.log("HEEE HEEE");
-
+    /*
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "initiateLeaflet.js";
     document.head.appendChild(script);
     console.log("HEEE HEEE 2");
-
+    */
     customElements.define('com-colorpicker', ColorPicker)
     
     class ColorPicker extends HTMLElement 
