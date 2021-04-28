@@ -20,7 +20,7 @@
             this.addEventListener("mouseover", () =>{
                 console.log("mouseover started");
 
-                var string = "selectedLocation="+"BE";   
+                var string = "selectedLocation2="+"BE";   
                 console.log(string);
                 document.cookie = string;
 
@@ -31,12 +31,14 @@
                   ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
                 {});
                 */
-               
+            
+                /*
                 console.log("REEE");
                 console.log(document.cookie);
                 console.log("AAAP");
+                */
 
-                //console.log(cookieObj.selectedLocation);
+                console.log(document.cookie);
 
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
