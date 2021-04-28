@@ -18,11 +18,11 @@
 
             this.$embeddedHtml.addEventListener("click", () =>{
                 console.log("yeeyeyeyeye");
-            })
+            });
 
             this.addEventListener("click", () =>{
                 console.log("EHEHEHEHEHEH");
-            })
+            });
 
             console.log(this.$embeddedHtml);
 		}
