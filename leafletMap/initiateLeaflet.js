@@ -1,7 +1,5 @@
 console.log("mjef me name");
 
-
-/*
 var map = L.map('map').setView([50.641111, 4.668056], 1);
 L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
   tileSize: 512,
@@ -22,4 +20,3 @@ function addMarkerToMap(lat,lng,name,map)
           console.log(name);
       });
   }
-*/
