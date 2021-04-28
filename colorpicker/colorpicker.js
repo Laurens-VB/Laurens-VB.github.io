@@ -29,7 +29,7 @@
 
     var script = document.createElement("script");
     script.type = "text/javascript";
-    script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
+    script.appendChild(console.log("REEEEEEEEEEEEEEEEEE"));
     document.body.appendChild(script);
     //document.getElementById("map").appendChild(script);
 
