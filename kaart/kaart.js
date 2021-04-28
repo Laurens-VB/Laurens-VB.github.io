@@ -27,7 +27,10 @@
                   ({...accumulator, [key.trim()]: decodeURIComponent(value) }),
                 {});
 
-              console.log(cookieObj.selectedLocation);
+                console.log("REEE");
+                console.log(cookieObj);
+
+                console.log(cookieObj.selectedLocation);
 
                 var properties = {selectedRegionISO2 : cookieObj.selectedLocation};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 

@@ -28,9 +28,9 @@
       {
           L.marker([lat,lng]).addTo(map).on('click', () =>
           {
-              
-              console.log(name);
-              document.cookie = "selectedLocation="+name;
+              var string = "selectedLocation="+name;   
+              console.log(string);
+              document.cookie = string;
           });
       }
   </script>
