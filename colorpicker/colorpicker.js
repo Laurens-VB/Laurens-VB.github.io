@@ -30,7 +30,9 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            var map = this._shadowRoot.querySelector('#map').setView([50.641111, 4.668056], 1);
+            var map = this._shadowRoot.querySelector('#map');//.setView([50.641111, 4.668056], 1);
+
+            console.log(map);
 
             
            /* this.$colorInputField = this._shadowRoot.querySelector('#color');
