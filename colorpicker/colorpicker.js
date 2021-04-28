@@ -3,7 +3,12 @@
     tmpl.innerHTML = `
         <embed id = "embeddedHtml" type="text/html" src="https://laurens-vb.github.io/leafletTest.html"  width="700" height="700">
     `;
-    
+
+    console.log("----------");
+    console.log(document.getElementById("embeddedHtml"));
+    console.log("----------");
+
+
     customElements.define('com-colorpicker', class ColorPicker extends HTMLElement 
     {
 
@@ -12,10 +17,6 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
-
-            console.log("----------");
-            console.log(document.getElementById("embeddedHtml"));
-            console.log("----------");
 
             /*
             this.addEventListener("onClicked", () => {
