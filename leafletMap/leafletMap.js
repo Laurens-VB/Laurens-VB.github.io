@@ -41,10 +41,11 @@
     </html>
     `;
 
-    customElements.define('com-leafletMap', class LeafletMap extends HTMLElement 
+    customElements.define('com-leafletmap', class LeafletMap extends HTMLElement 
     {
 
-		constructor() {
+		constructor() 
+        {
 			super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
