@@ -13,19 +13,16 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            
-            this.$colorInputField = this._shadowRoot.querySelector('#color');
-
-            this.addEventListener("input", () => {
-                var properties = {color : this.$colorInputField.value };
+            this.addEventListener("click", () => {
+                /*var properties = {color : this.$colorInputField.value };
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
                     {
                         properties: properties
                     }
-                }));
-                
+                }));*/
+                console.log("HEEE HEEE HEEE HAAA HAAA HAAA HOO HOOO HOOO");
 			});
 		}
         
