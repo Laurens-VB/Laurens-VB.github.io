@@ -23,6 +23,12 @@
     document.head.appendChild(headScript);
     console.log("HEEE HEEE");
     
+    var leafletPackage = document.createElement("script");
+    leafletPackage.type = "text/javascript";
+    leafletPackage.src = "https://unpkg.com/leaflet@1.7.1/dist/leaflet.js";
+    document.head.appendChild(leafletPackage);
+    console.log("HEEE HEEE 9");
+
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://laurens-vb.github.io/colorpicker/initiateLeaflet.js";
