@@ -4,8 +4,6 @@
     <iframe id = "embeddedHtml" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
     `;
 
-    console.log(document.getElementById("embeddedHtml").contentDocument.cookie);
-
     customElements.define('com-geomap', class geomap extends HTMLElement 
     {
 
@@ -19,7 +17,7 @@
             this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
             this.addEventListener("mouseover", () =>{
-                console.log("mouseover started");
+                console.log(window.location.href);
                 /*
                 var properties = {selectedRegionISO2 : document.cookie};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
