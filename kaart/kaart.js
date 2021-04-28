@@ -4,6 +4,8 @@
     <iframe id = "embeddedHtml" src="https://laurens-vb.github.io/kaart/kaart.html"  width="700" height="700">
     `;
 
+    console.log(document.getElementById("embeddedHtml").contentDocument.cookie);
+
     customElements.define('com-geomap', class geomap extends HTMLElement 
     {
 
