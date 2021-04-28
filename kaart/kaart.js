@@ -18,7 +18,6 @@
             this.$embeddedHtml = this._shadowRoot.querySelector('#embeddedHtml');
 
             this.addEventListener("mouseover", () =>{
-                console.log(document.cookie);
 
                 
 
