@@ -26,7 +26,7 @@
     var script = document.createElement("script");
     script.type = "text/javascript";
     script.src = "https://laurens-vb.github.io/leafletMap/initiateLeaflet.js";
-    document.getElementById("map").appendChild(script);
+    document.head.appendChild(script);
     console.log("HEEE HEEE 2");
 
     customElements.define('com-colorpicker', ColorPicker)
