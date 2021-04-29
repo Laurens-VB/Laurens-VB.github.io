@@ -3,18 +3,28 @@
     console.log("we here");
 
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `
-    <head>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
-    <style>
-        #map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}
-    </style>
-    </head>
-    <body>
-    </body>
-    `;
+    tmpl.innerHTML = ``;
+
+
+    var meta = document.createElement("meta");
+    meta.name= "viewport";
+    meta.content = "initial-scale=1,maximum-scale=1,user-scalable=no";
+
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css";
+
+    var script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
+
+    var style = document.createElement("style");
+    style.innerHTML =  `#map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}`
+
+
+    document.head.appendChild(meta);
+    document.head.appendChild(link);
+    document.head.appendChild(script);
+    document.head.appendChild(style);
 
     var div = document.createElement("div");
     div.id = "map";
