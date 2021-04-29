@@ -18,6 +18,11 @@
     </div>
     </body>
     `;
+
+    var div = document.createElement("div");
+    div.id = "kaart";
+
+    document.body.appendChild(div)
     
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
