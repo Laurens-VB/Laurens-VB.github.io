@@ -52,8 +52,7 @@
     div.appendChild(p);
 
     var body = document.body;
-
-
+    
     body.appendChild(div);
 
     tmpl.appendChild(head);
