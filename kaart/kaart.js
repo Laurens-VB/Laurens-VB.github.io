@@ -78,13 +78,13 @@
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
                     var properties = {selectedRegionISO2 : name};
-                    this.$map.dispatchEvent(new CustomEvent("propertiesChanged", 
+                    new CustomEvent("propertiesChanged", 
                     {
                         detail: 
                         {
                             properties: properties
                         }
-                    }));
+                    });
 
                     console.log("selectedLocation="+name);
                 });
