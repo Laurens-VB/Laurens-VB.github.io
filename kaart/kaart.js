@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
     <style>
-        #map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}
+        #map {position: absolute; top: 0; right: 0; bottom: 0; left: 0;}
     </style>
     </head>
     <body>
-    <div id="map">
+    <div id="map" style = "height:600px">
         <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
     <script>
