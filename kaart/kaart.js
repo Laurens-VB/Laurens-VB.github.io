@@ -57,7 +57,7 @@
 
             this.$map = this._shadowRoot.querySelector('#map');
 
-            
+            console.log(this.$map);
             
 
             this.addEventListener("click", () =>{
