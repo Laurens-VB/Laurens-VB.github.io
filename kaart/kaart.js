@@ -2,6 +2,14 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
     <h1 id="H1">BRO</h1>
+    <head>
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
+    <style>
+        #map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}
+    </style>
+    </head>
     `;
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
