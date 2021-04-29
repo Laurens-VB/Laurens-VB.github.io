@@ -77,14 +77,14 @@
             {
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
-                    /*var properties = {selectedRegionISO2 : name};
-                    this.dispatchEvent(new CustomEvent("propertiesChanged", 
+                    var properties = {selectedRegionISO2 : name};
+                    dispatchEvent(new CustomEvent("propertiesChanged", 
                     {
                         detail: 
                         {
                             properties: properties
                         }
-                    }));*/
+                    }));
 
                     console.log("selectedLocation="+name);
                 });
