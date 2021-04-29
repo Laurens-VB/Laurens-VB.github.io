@@ -13,14 +13,32 @@
     </style>
     </head>
     <body>
-    <div id="map">
-        <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
-    </div>
     </body>
     `;
 
     var div = document.createElement("div");
     div.id = "kaart";
+
+    var p = document.createElement("p");
+    p.id = "pMapCredits";
+
+    var aMapTiler = document.createElement("a");
+    aMapTiler.id = "aMapTiler";
+    aMapTiler.href = "https://www.maptiler.com/copyright/";
+    aMapTiler.target = "_blank";
+    aMapTiler.innerHTML = `© MapTiler`;
+
+    var aOpenStreetMap = document.createElement("a")
+    aOpenStreetMap.id = "aOpenStreetMap";
+    aOpenStreetMap.href = "https://www.openstreetmap.org/copyright";
+    aOpenStreetMap.target = "_blank";
+    aOpenStreetMap.innerHTML = `© OpenStreetMap contributors`;
+
+    p.appendChild(aMapTiler);
+    p.appendChild(aOpenStreetMap);
+
+    div.appendChild(p);
+
 
     document.body.appendChild(div)
     
