@@ -18,8 +18,6 @@
 
     var script = document.createElement('script');
     script.innerHTML = `console.log("TEST")`;
-    document.appendChild(script);
-
     
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
