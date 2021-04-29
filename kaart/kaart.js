@@ -13,7 +13,7 @@
     </style>
     </head>
     <body>
-    <div id="map" style = "height:900px>
+    <div id="map" style ="height:900px">
         <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
     <script>
@@ -77,14 +77,14 @@
             {
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
-                    var properties = {selectedRegionISO2 : name};
+                    /*var properties = {selectedRegionISO2 : name};
                     this.dispatchEvent(new CustomEvent("propertiesChanged", 
                     {
                         detail: 
                         {
                             properties: properties
                         }
-                    }));
+                    }));*/
 
                     console.log("selectedLocation="+name);
                 });
