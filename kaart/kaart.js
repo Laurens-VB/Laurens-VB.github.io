@@ -2,9 +2,7 @@
     runLeafletCDN();
     console.log("we here");
 
-    let tmpl = document.createElement('template');
-    tmpl.innerHTML = `<html></html>`;
-
+    var html = document.createElement('html');
 
     var head = document.head;
 
@@ -52,11 +50,11 @@
     div.appendChild(p);
 
     var body = document.body;
-    
+
     body.appendChild(div);
 
-    tmpl.appendChild(head);
-    tmpl.appendChild(body);
+    html.appendChild(head);
+    html.appendChild(body);
 
     var map = L.map('map').setView([50.641111, 4.668056], 1);
     L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
@@ -82,7 +80,7 @@
 
     tmpl.appendChild()
 
-    console.log("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeehaaaaaaaaaaaaaaaaaaaaaaa");
+    console.log("we did it.");
     
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
