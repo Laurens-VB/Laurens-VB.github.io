@@ -69,9 +69,9 @@
             crossOrigin: true
             }).addTo(test);
 
-            addMarkerToMap(50.641111,4.668056,"BE",map);
-            addMarkerToMap(51,10,"DE",map);
-            addMarkerToMap(47,2,"FR",map);
+            addMarkerToMap(50.641111,4.668056,"BE",test);
+            addMarkerToMap(51,10,"DE",test);
+            addMarkerToMap(47,2,"FR",test);
 
             function addMarkerToMap(lat,lng,name,map)
             {
