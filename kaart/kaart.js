@@ -26,7 +26,7 @@
 		constructor() {
             super(); 
 			this._shadowRoot = this.attachShadow({mode: "open"});
-            this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._shadowRoot.appendChild(script.content.cloneNode(true));
             this._firstConnection = false;
 
             
