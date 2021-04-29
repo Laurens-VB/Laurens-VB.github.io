@@ -58,6 +58,8 @@
             this.$map = this._shadowRoot.querySelector('#map');
 
             console.log(this.$map);
+
+            var test = L.map(this._shadowRoot.querySelector('#map')).setView([50.641111, 4.668056], 1);
             
 
             this.addEventListener("click", () =>{
