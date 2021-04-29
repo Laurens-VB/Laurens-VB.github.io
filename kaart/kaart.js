@@ -61,7 +61,7 @@
 
             var test = L.map(this.$map).setView([50.641111, 4.668056], 1);
 
-            this.$selectedLocation = "";
+            selectedLocation = "";
 
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
             tileSize: 512,
@@ -79,12 +79,12 @@
             {
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
-                    this.$selectedLocation = name;
+                    selectedLocation = name;
                 });
             }
 
             this.addEventListener("click", () => {
-                var properties = {selectedRegionISO2 : this.$selectedLocation};
+                var properties = {selectedRegionISO2 : selectedLocation};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
