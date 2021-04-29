@@ -17,7 +17,7 @@
     `;
 
     var div = document.createElement("div");
-    div.id = "kaart";
+    div.id = "map";
 
     var p = document.createElement("p");
     p.id = "pMapCredits";
@@ -40,7 +40,7 @@
     div.appendChild(p);
 
 
-    document.body.appendChild(div)
+    document.body.appendChild(div);
     
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
