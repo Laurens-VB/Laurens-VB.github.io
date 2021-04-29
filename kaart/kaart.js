@@ -72,6 +72,15 @@
             addMarkerToMap(50.641111,4.668056,"BE",map);
             addMarkerToMap(51,10,"DE",map);
             addMarkerToMap(47,2,"FR",map);
+
+            function addMarkerToMap(lat,lng,name,map)
+            {
+                L.marker([lat,lng]).addTo(map).on('click', () =>
+                {
+                    console.log("selectedLocation="+name);
+                    document.cookie = "selectedLocation="+name+";secure";
+                });
+            }
             
 
             this.addEventListener("click", () =>{
@@ -125,15 +134,6 @@
         }
 
         redraw(){
-        }
-
-        addMarkerToMap(lat,lng,name,map)
-        {
-            L.marker([lat,lng]).addTo(map).on('click', () =>
-            {
-                console.log("selectedLocation="+name);
-                document.cookie = "selectedLocation="+name+";secure";
-            });
         }
     });
 })();
