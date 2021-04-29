@@ -1,5 +1,5 @@
 (function()  {
-    let tmpl = document.createElement('template');
+    /*let tmpl = document.createElement('template');
     tmpl.innerHTML = `
     <h1 id="H1">BRO</h1>
     <head>
@@ -14,7 +14,13 @@
     <div id="map">
         <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
-    `;
+    `;*/
+
+    var script = document.createElement('script');
+    script.innerHTML = `console.log("TEST")`;
+    document.appendChild(script);
+
+    
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
     {
