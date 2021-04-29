@@ -61,7 +61,7 @@
 
             var test = L.map(this.$map).setView([50.641111, 4.668056], 1);
 
-            selectedLocation = "";
+            var selectedLocation = "";
 
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
             tileSize: 512,
