@@ -5,6 +5,7 @@
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `<html></html>`;
 
+    var head = document.head
 
     var meta = document.createElement("meta");
     meta.name= "viewport";
@@ -21,10 +22,12 @@
     style.innerHTML =  `#map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}`
 
 
-    document.head.appendChild(meta);
-    document.head.appendChild(link);
-    document.head.appendChild(script);
-    document.head.appendChild(style);
+    head.appendChild(meta);
+    head.appendChild(link);
+    head.appendChild(script);
+    head.appendChild(style);
+
+    tmpl.appendChild(head);
 
     var div = document.createElement("div");
     div.id = "map";
@@ -49,8 +52,10 @@
 
     div.appendChild(p);
 
+    var body = document.body;
+    body.appendChild(div);
 
-    document.body.appendChild(div);
+    tmpl.appendChild(body);
 
     var map = L.map('map').setView([50.641111, 4.668056], 1);
     L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
