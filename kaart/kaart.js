@@ -79,7 +79,7 @@
             {
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
-                    selectedLocation = name;
+                    this.$selectedLocation = name;
                 });
             }
 
