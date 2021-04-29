@@ -3,44 +3,81 @@
     console.log("we here");
 
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `<html>
-    <head>
-    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
-    <style>
-        #map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}
-    </style>
-    </head>
-    <body>
-    <div id="map">
-        <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
-    </div>
-    <script>
-        var map = L.map('map').setView([50.641111, 4.668056], 1);
-        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
-        tileSize: 512,
-        zoomOffset: -1,
-        minZoom: 5,
-        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-        crossOrigin: true
-        }).addTo(map);
-            
-        addMarkerToMap(50.641111,4.668056,"BE",map);
-        addMarkerToMap(51,10,"DE",map);
-        addMarkerToMap(47,2,"FR",map);
+    tmpl.innerHTML = `<html></html>`;
 
-        function addMarkerToMap(lat,lng,name,map)
+    var head = document.head
+
+    var meta = document.createElement("meta");
+    meta.name= "viewport";
+    meta.content = "initial-scale=1,maximum-scale=1,user-scalable=no";
+
+    var link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css";
+
+    var script = document.createElement("script");
+    script.src = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js";
+
+    var style = document.createElement("style");
+    style.innerHTML =  `#map {position: absolute; top: 50; right: 0; bottom: 0; left: 0;}`
+
+
+    head.appendChild(meta);
+    head.appendChild(link);
+    head.appendChild(script);
+    head.appendChild(style);
+
+    tmpl.appendChild(head);
+
+    var div = document.createElement("div");
+    div.id = "map";
+
+    var p = document.createElement("p");
+    p.id = "pMapCredits";
+
+    var aMapTiler = document.createElement("a");
+    aMapTiler.id = "aMapTiler";
+    aMapTiler.href = "https://www.maptiler.com/copyright/";
+    aMapTiler.target = "_blank";
+    aMapTiler.innerHTML = `© MapTiler`;
+
+    var aOpenStreetMap = document.createElement("a")
+    aOpenStreetMap.id = "aOpenStreetMap";
+    aOpenStreetMap.href = "https://www.openstreetmap.org/copyright";
+    aOpenStreetMap.target = "_blank";
+    aOpenStreetMap.innerHTML = `© OpenStreetMap contributors`;
+
+    p.appendChild(aMapTiler);
+    p.appendChild(aOpenStreetMap);
+
+    div.appendChild(p);
+
+    var body = document.body;
+    body.appendChild(div);
+
+    tmpl.appendChild(body);
+
+    var map = L.map('map').setView([50.641111, 4.668056], 1);
+    L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
+    tileSize: 512,
+    zoomOffset: -1,
+    minZoom: 5,
+    attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+    crossOrigin: true
+    }).addTo(map);
+        
+    addMarkerToMap(50.641111,4.668056,"BE",map);
+    addMarkerToMap(51,10,"DE",map);
+    addMarkerToMap(47,2,"FR",map);
+
+    function addMarkerToMap(lat,lng,name,map)
+    {
+        L.marker([lat,lng]).addTo(map).on('click', () =>
         {
-            L.marker([lat,lng]).addTo(map).on('click', () =>
-            {
-                console.log("selectedLocation="+name);
-                document.cookie = "selectedLocation="+name+";secure";
-            });
-        }
-    </script>
-    </body>
-    </html>`;
+            console.log("selectedLocation="+name);
+            document.cookie = "selectedLocation="+name+";secure";
+        });
+    }
 
     console.log("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeehaaaaaaaaaaaaaaaaaaaaaaa");
     
