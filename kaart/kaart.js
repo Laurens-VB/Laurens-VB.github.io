@@ -13,7 +13,7 @@
     </style>
     </head>
     <body>
-    <div id="map" style = "height:100%>
+    <div id="map" style = "height:900px>
         <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
     <script>
