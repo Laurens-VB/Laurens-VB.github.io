@@ -68,6 +68,10 @@
             attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
             crossOrigin: true
             }).addTo(test);
+
+            addMarkerToMap(50.641111,4.668056,"BE",map);
+            addMarkerToMap(51,10,"DE",map);
+            addMarkerToMap(47,2,"FR",map);
             
 
             this.addEventListener("click", () =>{
@@ -121,6 +125,15 @@
         }
 
         redraw(){
+        }
+
+        addMarkerToMap(lat,lng,name,map)
+        {
+            L.marker([lat,lng]).addTo(map).on('click', () =>
+            {
+                console.log("selectedLocation="+name);
+                document.cookie = "selectedLocation="+name+";secure";
+            });
         }
     });
 })();
