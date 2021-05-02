@@ -83,7 +83,6 @@
                 {
                     selectedLocation = name;
                 });
-                marker.dispatchEvent(new Event("onSelect"));
             }
 
             //this.dispatchEvent(new Event("onSelect"));
@@ -91,7 +90,7 @@
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : selectedLocation};
-                this.dispatchEvent(new CustomEvent("propertiesChanged", 
+                this.dispatchEvent(new Event("onSelect", 
                 {
                     detail: 
                     {
