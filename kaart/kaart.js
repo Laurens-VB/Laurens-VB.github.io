@@ -75,19 +75,16 @@
             addMarkerToMap(51,10,"DE",test);
             addMarkerToMap(47,2,"FR",test);
 
-            var event;
-
             function addMarkerToMap(lat,lng,name,map)
             {
-                L.marker([lat,lng]).addTo(map).on('click', () =>
+                L.marker([lat,lng]).addTo(map).addEventListener('click', () =>
                 {
-                    selectedLocation = name;
-                    event = new Event("onSelect");
+                    selectedLocation = name; 
                 });
             }
 
-            this.dispatchEvent(event);
-            console.log("event onSelect");
+            //this.dispatchEvent(new Event("onSelect"));
+            //console.log("event onSelect");
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : selectedLocation};
