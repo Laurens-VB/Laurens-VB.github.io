@@ -48,5 +48,9 @@
 	},
 	"events": 
     {
+        "onSelect" :
+        {
+            "description" : "Wordt aangeroepen wanneer de gebruiker een land selecteerd"
+        }
 	}
 }

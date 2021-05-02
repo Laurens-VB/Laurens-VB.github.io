@@ -85,7 +85,7 @@
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : selectedLocation};
-                this.dispatchEvent(new CustomEvent("propertiesChanged", 
+                this.dispatchEvent(new Event("onSelect", 
                 {
                     detail: 
                     {
