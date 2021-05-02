@@ -77,9 +77,13 @@
 
             function addMarkerToMap(lat,lng,name,map)
             {
-                L.marker([lat,lng]).addTo(map).addEventListener('click', () =>
+                var marker =  L.marker([lat,lng]);
+                marker.addTo(map)
+                marker.addEventListener('click', () =>
                 {
                     selectedLocation = name; 
+                    marker.dispatchEvent(new Event("onSelect"));
+                    console.log("onSelect dispatched")
                 });
             }
 
