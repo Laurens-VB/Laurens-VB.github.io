@@ -96,7 +96,7 @@
                     {
                         properties: properties
                     }
-                });
+                }));
                 this.dispatchEvent(new Event("onSelect"));
                 
 			});
