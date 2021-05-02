@@ -80,12 +80,13 @@
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
                     selectedLocation = name;
+                    this.dispatchEvent(new Event("onSelect",{}))
                 });
             }
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : selectedLocation};
-                this.dispatchEvent(new Event("onSelect", 
+                this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
                     {
