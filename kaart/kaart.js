@@ -82,7 +82,7 @@
                 marker.addEventListener('click', () =>
                 {
                     selectedLocation = name; 
-                    this.dispatchEvent(new Event("onSelect"));
+                    EventTarget.dispatchEvent(new Event("onSelect"));
                     console.log("onSelect dispatched")
                 });
             }
