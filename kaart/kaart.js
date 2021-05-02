@@ -80,7 +80,8 @@
                 L.marker([lat,lng]).addTo(map).on('click', () =>
                 {
                     selectedLocation = name;
-                    this.dispatchEvent(new Event("onSelect",{}))
+                    dispatchEvent(new Event("onSelect",{}));
+                    console.log("event onSelect");
                 });
             }
 
