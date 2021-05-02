@@ -81,10 +81,9 @@
                 marker.addTo(map)
                 marker.addEventListener('click', () =>
                 {
-                    selectedLocation = name; 
-                    EventTarget.dispatchEvent(new Event("onSelect"));
-                    console.log("onSelect dispatched")
+                    selectedLocation = name;
                 });
+                marker.dispatchEvent(new Event("onSelect"));
             }
 
             //this.dispatchEvent(new Event("onSelect"));
