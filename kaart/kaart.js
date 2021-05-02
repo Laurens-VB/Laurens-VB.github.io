@@ -90,7 +90,7 @@
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : selectedLocation};
-                this.dispatchEvent(new Event("onSelect", 
+                this.dispatchEvent(new Event("onSelect"), 
                 {
                     detail: 
                     {
