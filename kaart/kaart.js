@@ -39,7 +39,7 @@
             this.$map = this._shadowRoot.querySelector('#map');
 
 
-            var test = L.map(this.$map).setView([50.641111, 4.668056], 1);
+            this.$test = L.map(this.$map).setView([50.641111, 4.668056], 1);
 
             var selectedLocation = "";
 
@@ -53,21 +53,7 @@
                 minZoom: 5,
                 attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
                 crossOrigin: true
-            }).addTo(test);
-
-            addMarkerToMap(50.641111,4.668056,"BE",test);
-            addMarkerToMap(51,10,"DE",test);
-            addMarkerToMap(47,2,"FR",test);
-
-            function addMarkerToMap(lat,lng,name,map)
-            {
-                var marker =  L.marker([lat,lng], {icon: DefaultIcon});
-                marker.addTo(map)
-                marker.addEventListener('click', () =>
-                {
-                    selectedLocation = name;
-                });
-            }
+            }).addTo(this.$test);
 
             //this.dispatchEvent(new Event("onSelect"));
             //console.log("event onSelect");
@@ -130,8 +116,19 @@
         }
 
         redraw(){
-           
+            addMarkerToMap(50.641111,4.668056,"BE",this.$test);
+            addMarkerToMap(51,10,"DE",this.$test);
+            addMarkerToMap(47,2,"FR",this.$test);
 
+            function addMarkerToMap(lat,lng,name,map)
+            {
+                var marker =  L.marker([lat,lng], {icon: DefaultIcon});
+                marker.addTo(map)
+                marker.addEventListener('click', () =>
+                {
+                    selectedLocation = name;
+                });
+            }
         }
     });
 })();
