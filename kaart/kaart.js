@@ -60,7 +60,7 @@
 
             function addMarkerToMap(lat,lng,name,map)
             {
-                var marker =  L.marker([lat,lng]);
+                var marker =  L.marker([lat,lng], {icon: DefaultIcon});
                 marker.addTo(map)
                 marker.addEventListener('click', () =>
                 {
