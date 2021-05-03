@@ -17,7 +17,8 @@
     </div>
     </body>
     </html>`;
-    
+
+    document.head.appendChild(addLeafletStyle());
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
     {
@@ -29,11 +30,6 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            this.$head = this._shadowRoot.querySelector('#header');
-            console.log(this.$head);
-            console.log("----------------");
-            console.log(addLeafletStyle());
-            console.log("----------------");
 
 
             this.$map = this._shadowRoot.querySelector('#map');
