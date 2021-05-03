@@ -3,7 +3,7 @@
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `<html>
-    <head>
+    <head id="header">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.js"></script>
@@ -29,7 +29,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            this.$head = this._shadowRoot.querySelector('head');
+            this.$head = this._shadowRoot.querySelector('#header');
             console.log(this.$head);
             console.log("----------------");
             console.log(addLeafletStyle());
