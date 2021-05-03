@@ -1,6 +1,5 @@
 (function()  {
     runLeafletCDN();
-    console.log("we here");
 
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `<html>
@@ -16,33 +15,8 @@
     <div id="map" style ="height:900px">
         <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
-    <script>
-        var map = L.map('map').setView([50.641111, 4.668056], 1);
-        L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
-        tileSize: 512,
-        zoomOffset: -1,
-        minZoom: 5,
-        attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-        crossOrigin: true
-        }).addTo(map);
-            
-        addMarkerToMap(50.641111,4.668056,"BE",map);
-        addMarkerToMap(51,10,"DE",map);
-        addMarkerToMap(47,2,"FR",map);
-
-        function addMarkerToMap(lat,lng,name,map)
-        {
-            L.marker([lat,lng]).addTo(map).on('click', () =>
-            {
-                console.log("selectedLocation="+name);
-                document.cookie = "selectedLocation="+name+";secure";
-            });
-        }
-    </script>
     </body>
     </html>`;
-
-    console.log("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeehaaaaaaaaaaaaaaaaaaaaaaa");
     
     
     customElements.define('com-geomap', class geomap extends HTMLElement 
@@ -63,12 +37,13 @@
 
             var selectedLocation = "";
 
-            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',{
-            tileSize: 512,
-            zoomOffset: -1,
-            minZoom: 5,
-            attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
-            crossOrigin: true
+            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',
+            {
+                tileSize: 512,
+                zoomOffset: -1,
+                minZoom: 5,
+                attribution: "\u003ca href=\"https://www.maptiler.com/copyright/\" target=\"_blank\"\u003e\u0026copy; MapTiler\u003c/a\u003e \u003ca href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\"\u003e\u0026copy; OpenStreetMap contributors\u003c/a\u003e",
+                crossOrigin: true
             }).addTo(test);
 
             addMarkerToMap(50.641111,4.668056,"BE",test);
@@ -140,6 +115,7 @@
         }
         
         onCustomWidgetDestroy(){
+
         }
 
         redraw(){
@@ -149,7 +125,6 @@
 
 function runLeafletCDN()
 {
-    
     /* @preserve
     * Leaflet 1.7.1, a JS library for interactive maps. http://leafletjs.com
     * (c) 2010-2019 Vladimir Agafonkin, (c) 2010-2011 CloudMade
