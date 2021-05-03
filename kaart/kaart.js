@@ -29,52 +29,6 @@
             this._firstConnection = false;
 
             
-            this.redraw();
-
-
-            /*
-            this.addEventListener("click", () =>{
-                console.log("click");
-            });
-
-            this.addEventListener("mousemove", () =>{
-                console.log("mousemove");
-            });
-
-            this.addEventListener("mousedown", () =>{
-                console.log("mousedown");
-            });
-            */
-		}
-        
-
-        connectedCallback(){
-            this._firstConnection = true;
-            this.redraw();
-        }
-
-        disconnectedCallback(){
-        
-        }
-
-		onCustomWidgetBeforeUpdate(oChangedProperties) {
-            if ("regios" in changedProperties) {
-				this.$compareTo = changedProperties["regios"];
-                console.log("kekw");
-			}
-		}
-
-		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this._firstConnection){
-                this.redraw();
-            }
-        }
-        
-        onCustomWidgetDestroy(){
-
-        }
-
-        redraw(){
             let DefaultIcon = L.icon({
                 iconUrl: `https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png`,
                 shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
@@ -130,6 +84,53 @@
                 this.dispatchEvent(new Event("onSelect"));
                 
 			});
+
+
+            /*
+            this.addEventListener("click", () =>{
+                console.log("click");
+            });
+
+            this.addEventListener("mousemove", () =>{
+                console.log("mousemove");
+            });
+
+            this.addEventListener("mousedown", () =>{
+                console.log("mousedown");
+            });
+            */
+		}
+        
+
+        connectedCallback(){
+            this._firstConnection = true;
+            this.redraw();
+        }
+
+        disconnectedCallback(){
+        
+        }
+
+		onCustomWidgetBeforeUpdate(oChangedProperties) {
+		}
+
+		onCustomWidgetAfterUpdate(oChangedProperties) {
+            if (this._firstConnection){
+                this.redraw();
+            }
+
+            if ("regios" in oChangedProperties) {
+				this.$compareTo = oChangedProperties["regios"];
+                console.log("kekw");
+			}
+        }
+        
+        onCustomWidgetDestroy(){
+
+        }
+
+        redraw(){
+           
 
         }
     });
