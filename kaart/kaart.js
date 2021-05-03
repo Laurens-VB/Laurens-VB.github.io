@@ -28,8 +28,6 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            L.Marker.prototype.options.icon = DefaultIcon;
-
             this.$map = this._shadowRoot.querySelector('#map');
 
 
