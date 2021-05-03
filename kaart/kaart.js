@@ -107,7 +107,12 @@
 
             if ("regios" in oChangedProperties) {
 				this.$regios = oChangedProperties["regios"];
-                console.log(this.$regios);
+
+                for(var element in this.$regios)
+                {
+                    console.log(element);
+                }
+
                 this.remake();
 			}
         }
@@ -116,12 +121,18 @@
 
         }
 
-        remake(){
+        popAllMarks(){
             for(var marker in this.$markers)
             {
                 this.$test.removeLayer(this.$markers.pop());
             }
             this.$test.removeLayer(this.$markers.pop());
+        }
+
+        remake()
+        {
+            this.popAllMarks();
+
         }
 
         addMarkerToMap(lat,lng,name,map)
