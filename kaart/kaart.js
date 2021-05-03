@@ -29,7 +29,7 @@
 
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._firstConnection = false;
+            
 
             this.$map = this._shadowRoot.querySelector('#map');
 
@@ -102,6 +102,7 @@
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
                 console.log("first connection");
+                this._firstConnection = false;
             }
 
             if ("regios" in oChangedProperties) {
