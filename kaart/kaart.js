@@ -12,7 +12,7 @@
     </style>
     </head>
     <body>
-    <div id="map" style ="height:900px">
+    <div id="map" style ="height:100%">
         <p><a href="https://www.maptiler.com/copyright/" target="_blank">© MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">© OpenStreetMap contributors</a></p>
     </div>
     </body>
@@ -29,7 +29,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            this._shadowRoot.styleSheets("https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css");
+            StyleSheet.href = "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css";
             console.log("stylesheet added");
 
 
