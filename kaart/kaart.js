@@ -106,9 +106,9 @@
             }
 
             if ("regios" in oChangedProperties) {
-				this.$compareTo = oChangedProperties["regios"];
-                console.log("kekw");
-                this.redraw();
+				this.$regios = oChangedProperties["regios"];
+                console.log(this.$regios);
+                this.remake();
 			}
         }
         
@@ -116,7 +116,7 @@
 
         }
 
-        redraw(){
+        remake(){
             for(var marker in this.$markers)
             {
                 this.$test.removeLayer(this.$markers.pop());
