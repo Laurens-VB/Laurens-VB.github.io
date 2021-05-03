@@ -28,12 +28,6 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-            
-            let DefaultIcon = L.icon({
-                iconUrl: `https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png`,
-                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-            });
-
             L.Marker.prototype.options.icon = DefaultIcon;
 
             this.$map = this._shadowRoot.querySelector('#map');
@@ -57,6 +51,12 @@
 
             //this.dispatchEvent(new Event("onSelect"));
             //console.log("event onSelect");
+
+            this.$markers = [];
+
+            this.addMarkerToMap(50.641111,4.668056,"BE",this.$test);
+            this.addMarkerToMap(51,10,"DE",this.$test);
+            this.addMarkerToMap(47,2,"FR",this.$test);
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : selectedLocation};
@@ -108,6 +108,7 @@
             if ("regios" in oChangedProperties) {
 				this.$compareTo = oChangedProperties["regios"];
                 console.log("kekw");
+                this.redraw();
 			}
         }
         
@@ -116,19 +117,27 @@
         }
 
         redraw(){
-            addMarkerToMap(50.641111,4.668056,"BE",this.$test);
-            addMarkerToMap(51,10,"DE",this.$test);
-            addMarkerToMap(47,2,"FR",this.$test);
-
-            function addMarkerToMap(lat,lng,name,map)
+            for(var marker in this.$markers)
             {
-                var marker =  L.marker([lat,lng], {icon: DefaultIcon});
-                marker.addTo(map)
-                marker.addEventListener('click', () =>
-                {
-                    selectedLocation = name;
-                });
+                this.$markers.pop().remove(map);
             }
+            
+            let DefaultIcon = L.icon({
+                iconUrl: `https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png`,
+                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+            });
+        }
+
+        addMarkerToMap(lat,lng,name,map)
+        {
+            var marker =  L.marker([lat,lng], {icon: DefaultIcon});
+            marker.addTo(map)
+            marker.addEventListener('click', () =>
+            {
+                selectedLocation = name;
+            });
+
+            this.$markers.push(marker);
         }
     });
 })();
