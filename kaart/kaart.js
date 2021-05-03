@@ -31,7 +31,9 @@
 
             this.$head = this._shadowRoot.querySelector('head');
             //this.$head.appendChild();
+            console.log("----------------");
             console.log(addLeafletStyle());
+            console.log("----------------");
 
 
             this.$map = this._shadowRoot.querySelector('#map');
