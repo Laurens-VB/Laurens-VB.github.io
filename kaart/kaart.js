@@ -787,5 +787,5 @@ function addLeafletStyle()
 
     console.log(style);
 
-    //return style;
+    return style;
 }
