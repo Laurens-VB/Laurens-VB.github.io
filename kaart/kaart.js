@@ -100,6 +100,7 @@
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
+                console.log("first connection");
             }
 
             if ("regios" in oChangedProperties) {
