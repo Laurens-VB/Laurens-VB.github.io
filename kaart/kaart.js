@@ -88,7 +88,6 @@
 
         connectedCallback(){
             this._firstConnection = true;
-            this.redraw();
         }
 
         disconnectedCallback(){
