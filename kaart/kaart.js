@@ -100,7 +100,6 @@
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
-                this.redraw();
             }
 
             if ("regios" in oChangedProperties) {
