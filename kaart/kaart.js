@@ -102,6 +102,7 @@
             if (this._firstConnection){
                 console.log("first connection");
                 this._firstConnection = false;
+                return;
             }
 
             if ("regios" in oChangedProperties) {
