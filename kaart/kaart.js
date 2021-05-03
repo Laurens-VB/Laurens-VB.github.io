@@ -30,7 +30,6 @@
 			this._shadowRoot = this.attachShadow({mode: "open"});
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
-
             this.$map = this._shadowRoot.querySelector('#map');
 
 
