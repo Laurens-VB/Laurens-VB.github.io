@@ -30,7 +30,7 @@
             this._firstConnection = false;
 
             this.$head = this._shadowRoot.querySelector('head');
-            //this.$head.appendChild();
+            console.log("head");
             console.log("----------------");
             console.log(addLeafletStyle());
             console.log("----------------");
