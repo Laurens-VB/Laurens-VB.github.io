@@ -30,8 +30,8 @@
             this._firstConnection = false;
 
             this.$head = this._shadowRoot.querySelector('head');
-            this.$head.appendChild(addLeafletStyle());
-            console.log("stylesheet added");
+            //this.$head.appendChild();
+            console.log(addLeafletStyle());
 
 
             this.$map = this._shadowRoot.querySelector('#map');
@@ -781,7 +781,9 @@ function addLeafletStyle()
         margin-left: -12px;
         border-right-color: #fff;
         }
-    `
+    `;
 
-    return style;
+    console.log(style);
+
+    //return style;
 }
