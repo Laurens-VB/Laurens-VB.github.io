@@ -119,17 +119,17 @@
         redraw(){
             for(var marker in this.$markers)
             {
-                this.$markers.pop().remove(map);
+                this.$test.removeLayer(this.$markers.pop());
             }
-            
-            let DefaultIcon = L.icon({
-                iconUrl: `https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png`,
-                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-            });
         }
 
         addMarkerToMap(lat,lng,name,map)
         {
+            let DefaultIcon = L.icon({
+                iconUrl: `https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png`,
+                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+            });
+
             var marker =  L.marker([lat,lng], {icon: DefaultIcon});
             marker.addTo(map)
             marker.addEventListener('click', () =>
