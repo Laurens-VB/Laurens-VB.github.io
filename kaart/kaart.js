@@ -1,3 +1,11 @@
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
+
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow
+});
+
 (function()  {
     runLeafletCDN();
 
@@ -28,7 +36,7 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
-
+            L.Marker.prototype.options.icon = DefaultIcon;
 
             this.$map = this._shadowRoot.querySelector('#map');
 
@@ -37,6 +45,7 @@
 
             var selectedLocation = "";
 
+            
             console.log(L.Icon.Default.prototype._getIconUrl());
 
             L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=tLle2wcpHPrfuS2ObIb7',
