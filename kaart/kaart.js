@@ -110,7 +110,7 @@
 
                 for(var element in this.$regios)
                 {
-                    console.log(element);
+                    console.log(this.$regios[element]);
                 }
 
                 this.remake();
