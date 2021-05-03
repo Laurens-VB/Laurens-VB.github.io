@@ -121,6 +121,7 @@
             {
                 this.$test.removeLayer(this.$markers.pop());
             }
+            this.$test.removeLayer(this.$markers.pop());
         }
 
         addMarkerToMap(lat,lng,name,map)
