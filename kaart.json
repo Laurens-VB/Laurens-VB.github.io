@@ -4,7 +4,7 @@
 	"vendor": "Laurens VB",
 	"id": "LVB_KAART",
 	"newInstancePrefix": "Kaart",
-	"version": "2.0.0",
+	"version": "3.0.0",
     "webcomponents": 
     [
         {
@@ -22,6 +22,12 @@
             "type" : "string",
             "description" : "selectedRegionISO2",
             "default" : ""
+        },
+        "regios" : 
+        {
+            "type" : "string[]",
+            "description" : "regio's",
+            "default" : []
         }
 	},
 	"methods": 
@@ -44,6 +50,26 @@
             ],
             "description" : "set test selectedRegionISO2",
             "body" : "this.selectedRegionISO2 = selectedRegionISO2;"
+        },
+        
+        "getRegios":
+        {
+            "returnType" : "string[]",
+            "description" : "retourneert regio's",
+            "body" : "return this.regios;"
+        },
+        "setRegios":
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "regios",
+                    "type" : "string[]",
+                    "description" : "set new regios"
+                }
+            ],
+            "description" : "set test regios",
+            "body" : "this.regios = regios;"
         }
 	},
 	"events": 
