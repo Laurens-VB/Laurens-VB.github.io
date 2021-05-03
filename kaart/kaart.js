@@ -29,8 +29,8 @@
             this._firstConnection = false;
 
             let DefaultIcon = L.icon({
-                iconUrl: `https://laurens-vb.github.io/kaart/testIcon.png`,
-                shadowUrl: `https://laurens-vb.github.io/kaart/testIcon.png`
+                iconUrl: `https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png`,
+                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
             });
 
             L.Marker.prototype.options.icon = DefaultIcon;
