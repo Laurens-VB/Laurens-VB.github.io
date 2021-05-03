@@ -29,9 +29,12 @@
             this._shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
 
+            this._shadowRoot.styleSheets("https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.1/leaflet.css");
+            console.log("stylesheet added");
+
+
             this.$map = this._shadowRoot.querySelector('#map');
 
-            console.log(this.$map);
 
             var test = L.map(this.$map).setView([50.641111, 4.668056], 1);
 
