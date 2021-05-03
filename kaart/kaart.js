@@ -110,7 +110,9 @@
 
                 for(var element in this.$regios)
                 {
-                    console.log(this.$regios[element]);
+                    var string = this.$regios[element];
+                    string = string.slice(1,-1);
+                    console.log(string.split(','));
                 }
 
                 this.remake();
