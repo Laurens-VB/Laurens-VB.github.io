@@ -148,7 +148,7 @@
                 {
                     if(Number(regios[regio][3].trim()) === aggrLvl)
                     {
-                        this.addMarkerToMap(Number(regios[regio][0].trim())
+                        this.createMarkers(Number(regios[regio][0].trim())
                         , Number(regios[regio][1].trim())
                         , regios[regio][2].trim()
                         , this.$test
@@ -161,7 +161,7 @@
             for(var regio in regios)
             {
                 
-                this.addMarkerToMap(Number(regios[regio][0].trim())
+                this.createMarkers(Number(regios[regio][0].trim())
                 , Number(regios[regio][1].trim())
                 , regios[regio][2].trim()
                 , this.$test
