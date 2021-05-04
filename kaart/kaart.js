@@ -1,3 +1,5 @@
+const { marker } = require("leaflet");
+
 (function()  {
     runLeafletCDN();
 
@@ -52,7 +54,8 @@
             //this.dispatchEvent(new Event("onSelect"));
             //console.log("event onSelect");
 
-            this.$markers = [];
+            this.$createdMarkers = [[],[],[]];
+            this.$mappedMarkers = [];
 
             this.addMarkerToMap(50.641111,4.668056,"BE",this.$test);
             this.addMarkerToMap(51,10,"DE",this.$test);
@@ -119,66 +122,45 @@
                     //array van 4 elem doorgeven aan functie remake zodanig dat alle markers opnieuw geplaatst worden!
                 }
 
-                console.log(this.$aggregationLevel);
-
-                this.remake(regioFormatted, this.$aggregationLevel);
+                this.makeAllMarkers(regioFormatted);
 			}
+
+            if("aggregationLevel" in oChangedProperties)
+            {
+                this.remake(this.$aggregationLevel);
+            }
         }
         
         onCustomWidgetDestroy(){
 
         }
 
-        popAllMarks(){
-            do
+        loadWithAllMarkers()
+        {
+            for(var markerArray in this.$createdMarkers)
             {
-                this.$test.removeLayer(this.$markers.pop());
+                for(var marker in markerArray)
+                {
+                    this.addMarkerToMap(this.$test, this.$createdMarkers[markerArray][marker]);
+                }
             }
-            while(this.$markers.length !== 0);
         }
 
-        remake(regios,aggrLvl)
+        remake(aggrLvl)
         {
-            this.popAllMarks();
-
-            console.log(regios);
-            if(aggrLvl !== 4)
+            this.popAllMappedMarkers();
+            for(var marker in this.$createdMarkers[aggrLvl])
             {
-                for(var regio in regios)
-                {
-                    if(Number(regios[regio][3].trim()) === aggrLvl)
-                    {
-                        this.addMarkerToMap(Number(regios[regio][0].trim())
-                        , Number(regios[regio][1].trim())
-                        , regios[regio][2].trim()
-                        , this.$test
-                        , Number(regios[regio][3].trim()));
-                    }
-                }
+                this.addMarkerToMap(this.$test, this.$createdMarkers[aggrLvl][marker]);
+            }
+        }
+
+        createMarker(lat,lng,name,aggregationLvl)
+        {
+            if(aggregationLvl === undefined)
+            {
                 return;
             }
-
-            for(var regio in regios)
-            {
-                
-                this.addMarkerToMap(Number(regios[regio][0].trim())
-                , Number(regios[regio][1].trim())
-                , regios[regio][2].trim()
-                , this.$test
-                , Number(regios[regio][3].trim()));
-                
-            }
-
-
-        }
-
-        addMarkerToMap(lat,lng,name,map, aggregationLvl)
-        {
-            var DefaultIcon;
-            DefaultIcon = L.icon({
-                iconUrl: `https://laurens-vb.github.io/kaart/marker_red_transparant.png`,
-                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-            });
 
             if(aggregationLvl === 0)
             {
@@ -206,15 +188,45 @@
 
             var DefaultIcon;
 
-            var marker =  L.marker([lat,lng], {icon: DefaultIcon});
-            marker.addTo(map)
+            var marker =  L.marker([lat,lng]);
+            marker.setIcon({icon: DefaultIcon});
             marker.addEventListener('click', () =>
             {
                 this.$selectedLocation = name;
             });
 
-            this.$markers.push(marker);
+            //aggr lvl is 0, 1 of 2 dit zijn de dimensies van onze arary!
+            this.$createdMarkers[aggregationLvl].push(marker);
         }
+
+        addMarkerToMap(marker, map)
+        {
+            marker.addTo(map);
+            this.$mappedMarkers.push(marker);
+        }
+
+        
+        popAllMappedMarkers(){
+            do
+            {
+                this.$test.removeLayer(this.$mappedMarkers.pop());
+            }
+            while(this.$mappedMarkers.length !== 0);
+        }
+
+        makeAllMarkers(regios){
+            for(var regio in regios)
+            {
+                this.createMarker(Number(regios[regio][0].trim())
+                , Number(regios[regio][1].trim())
+                , regios[regio][2].trim()
+                , this.$test
+                , Number(regios[regio][3].trim()));
+            }
+        }
+
+
+
     });
 })();
 
