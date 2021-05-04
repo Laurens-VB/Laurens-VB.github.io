@@ -71,6 +71,10 @@
                 
 			});
 
+            this.addEventListener("onkeydown", () => {
+                console.log("KEY PRESSED");
+            })
+
 
             /*
             this.addEventListener("click", () =>{
