@@ -202,6 +202,9 @@
             this.$markers.push(marker);
             marker.addEventListener('click', () =>
             {
+                if (e.ctrlKey) {
+                    alert("CONTROL KEY PRESSED");
+                 }
                 this.$selectedLocation = name;
             });
         }
