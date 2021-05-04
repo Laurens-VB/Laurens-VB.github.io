@@ -133,6 +133,7 @@
             for(var marker in this.$markers)
             {
                 this.$test.removeLayer(this.$markers.pop());
+                console.log("marker deleted");
             }
             this.$test.removeLayer(this.$markers.pop());
         }
@@ -157,7 +158,7 @@
                 }
                 return;
             }
-            
+
             for(var regio in regios)
             {
                 
