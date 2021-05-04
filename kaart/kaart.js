@@ -105,8 +105,9 @@
                 return;
             }
 
-            if ("regios" in oChangedProperties) {
+            if ("regios" in oChangedProperties || "aggregationLevel" in oChangedProperties) {
 				this.$regios = oChangedProperties["regios"];
+                this.$aggregationLevel = oChangedProperties["aggregationLevel"];
 
                 var regioFormatted = [];
 
@@ -118,7 +119,9 @@
                     //array van 4 elem doorgeven aan functie remake zodanig dat alle markers opnieuw geplaatst worden!
                 }
 
-                this.remake(regioFormatted);
+                console.log(this.$aggregationLevel);
+
+                this.remake(regioFormatted, this.$aggregationLevel);
 			}
         }
         
@@ -134,7 +137,7 @@
             this.$test.removeLayer(this.$markers.pop());
         }
 
-        remake(regios)
+        remake(regios,aggrLvl)
         {
             this.popAllMarks();
 
@@ -142,11 +145,14 @@
 
             for(var regio in regios)
             {
-                this.addMarkerToMap(Number(regios[regio][0].trim())
+                if(Number(regios[regio][3].trim()) === aggrLvl)
+                {
+                    this.addMarkerToMap(Number(regios[regio][0].trim())
                     , Number(regios[regio][1].trim())
                     , regios[regio][2].trim()
                     , this.$test
                     , Number(regios[regio][3].trim()));
+                }
             }
 
         }
