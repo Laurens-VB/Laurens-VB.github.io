@@ -146,10 +146,13 @@
 
             console.log("POPPED");
 
-            /*console.log(regios);
-
             for(var regio in regios)
             {
+                console.log(Number(regios[regio][0].trim()));
+                console.log(Number(regios[regio][1].trim()));
+                console.log(regios[regio][2].trim());
+                console.log(this.$test);
+                console.log( Number(regios[regio][3].trim()));
                 
                 this.createMarkers(Number(regios[regio][0].trim())
                 , Number(regios[regio][1].trim())
@@ -157,12 +160,12 @@
                 , this.$test
                 , Number(regios[regio][3].trim()));
                 
-            }*/
+            }
 
 
         }
 
-        createMarkers(lat,lng,name,aggregationLvl)
+        createMarkers(lat,lng,name, map, aggregationLvl)
         {
             var DefaultIcon;
             DefaultIcon = L.icon({
