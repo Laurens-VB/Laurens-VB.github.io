@@ -142,10 +142,14 @@
 
             for(var regio in regios)
             {
-                this.addMarkerToMap(regio[0]
+                console.log(regio[0]);
+                console.log(regio[1]);
+                console.log(regio[2]);
+                console.log(regio[3]);
+                /*this.addMarkerToMap(regio[0]
                     , regio[1]
                     , regio[2]
-                    , this.$map);
+                    , this.$map);*/
             }
 
         }
