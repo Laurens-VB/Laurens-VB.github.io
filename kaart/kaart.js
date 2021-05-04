@@ -147,8 +147,6 @@
                     , regios[regio][2].trim()
                     , this.$test
                     , Number(regios[regio][3].trim()));
-                
-                console.log("marker added");
             }
 
         }
