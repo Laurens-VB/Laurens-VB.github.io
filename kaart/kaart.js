@@ -105,7 +105,7 @@
                 return;
             }
 
-            if ("regios" in oChangedProperties) {
+            /*if ("regios" in oChangedProperties) {
                 console.log("ik ben verandert");
 				this.$regios = oChangedProperties["regios"];
 
@@ -123,7 +123,7 @@
 
                 this.remake(regioFormatted);
                 console.log(regioFormatted);
-			}
+			}*/
         }
         
         onCustomWidgetDestroy(){
