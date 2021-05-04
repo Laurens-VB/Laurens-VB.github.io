@@ -203,7 +203,7 @@
             marker.addEventListener('click', () =>
             {
                 if (KeyboardEvent.ctrlKey) {
-                    alert("CONTROL KEY PRESSED");
+                    console.log("CONTROL KEY PRESSED");
                  }
                 this.$selectedLocation = name;
             });
