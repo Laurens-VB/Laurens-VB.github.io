@@ -54,9 +54,9 @@
 
             this.$markers = [];
 
-            this.addMarkerToMap(50.641111,4.668056,"BE",this.$test);
-            this.addMarkerToMap(51,10,"DE",this.$test);
-            this.addMarkerToMap(47,2,"FR",this.$test);
+            this.createMarkers(50.641111,4.668056,"BE",this.$test);
+            this.createMarkers(51,10,"DE",this.$test);
+            this.createMarkers(47,2,"FR",this.$test);
 
             this.addEventListener("click", () => {
                 var properties = {selectedRegionISO2 : this.$selectedLocation};
