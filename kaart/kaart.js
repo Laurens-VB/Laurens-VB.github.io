@@ -157,7 +157,7 @@
         {
             var DefaultIcon;
             DefaultIcon = L.icon({
-                iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
+                iconUrl: `https://laurens-vb.github.io/kaart/marker_red_transparant.png`,
                 shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
             });
 
