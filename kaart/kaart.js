@@ -188,6 +188,7 @@
 
             var marker =  L.marker([lat,lng]);
             marker.setIcon({icon: DefaultIcon});
+            marker.addTo(map);
             marker.addEventListener('click', () =>
             {
                 this.$selectedLocation = name;
@@ -199,7 +200,6 @@
 
         addMarkerToMap(marker, map)
         {
-            marker.addTo(map);
             this.$mappedMarkers.push(marker);
         }
 
