@@ -145,7 +145,7 @@
 
             for(var regio in regios)
             {
-                if(Number(regios[regio][3].trim()) === 1)
+                if(Number(regios[regio][3].trim()) === aggrLvl)
                 {
                     this.addMarkerToMap(Number(regios[regio][0].trim())
                     , Number(regios[regio][1].trim())
