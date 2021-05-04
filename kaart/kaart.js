@@ -145,20 +145,24 @@
             this.popAllMarks();
 
             console.log("POPPED");
+            var counter = 0;
 
             for(var regio in regios)
             {
-                if(regios[regio][1] !== undefined) {                 
+                if(regios[regio][1] !== undefined) 
+                {                 
                     this.createMarkers(Number(regios[regio][0].trim())
                     , Number(regios[regio][1].trim())
                     , regios[regio][2].trim()
                     , this.$test
-                    , Number(regios[regio][3].trim())); }
-                
-
-                
+                    , Number(regios[regio][3].trim())); 
+                }
+                else
+                {
+                    counter ++;
+                }              
             }
-
+            console.log(counter + "NULL VALUES");
 
         }
 
