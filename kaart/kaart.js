@@ -142,7 +142,11 @@
 
             for(var regio in regios)
             {
-                console.log(regio);
+                console.log(regios[regio][0]);
+                console.log(regios[regio][1]);
+                console.log(regios[regio][2]);
+                console.log(regios[regio][3]);
+                console.log("...................");
                 /*this.addMarkerToMap(regio[0]
                     , regio[1]
                     , regio[2]
