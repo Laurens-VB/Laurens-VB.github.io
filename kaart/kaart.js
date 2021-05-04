@@ -142,15 +142,12 @@
 
             for(var regio in regios)
             {
-                console.log(regios[regio][0]);
-                console.log(regios[regio][1]);
-                console.log(regios[regio][2]);
-                console.log(regios[regio][3]);
-                console.log("...................");
-                /*this.addMarkerToMap(regio[0]
-                    , regio[1]
-                    , regio[2]
-                    , this.$map);*/
+                this.addMarkerToMap(Number(regios[regio][0].trim())
+                    , Number(regios[regio][1].trim())
+                    , regios[regio][2].trim()
+                    , this.$map);
+                
+                console.log("marker added");
             }
 
         }
