@@ -145,6 +145,7 @@
                 this.addMarkerToMap(Number(regios[regio][0].trim())
                     , Number(regios[regio][1].trim())
                     , regios[regio][2].trim()
+                    , regios[regio][3].trim()
                     , this.$test);
                 
                 console.log("marker added");
