@@ -130,12 +130,11 @@
         }
 
         popAllMarks(){
-            for(var marker in this.$markers)
+            do
             {
                 this.$test.removeLayer(this.$markers.pop());
-                console.log("marker deleted");
             }
-            this.$test.removeLayer(this.$markers.pop());
+            while(this.$markers.length !== 0);
         }
 
         remake(regios,aggrLvl)
