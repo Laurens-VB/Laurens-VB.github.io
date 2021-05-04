@@ -108,7 +108,7 @@
             if ("regios" in oChangedProperties) {
 				this.$regios = oChangedProperties["regios"];
 
-                regioFormatted = [];
+                var regioFormatted = [];
 
                 for(var element in this.$regios)
                 {
