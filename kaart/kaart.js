@@ -71,7 +71,7 @@
                 
 			});
 
-            this.addEventListener("onkeydown", () => {
+            this.addEventListener("keypress", () => {
                 console.log("KEY PRESSED");
             })
 
