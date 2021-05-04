@@ -154,11 +154,39 @@
 
         addMarkerToMap(lat,lng,name,map)
         {
+            var aggregationLvl = 1;
+
             var DefaultIcon;
             DefaultIcon = L.icon({
                 iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
                 shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
             });
+
+            if(aggregationLvl === 0)
+            {
+                DefaultIcon = L.icon({
+                    iconUrl: `https://laurens-vb.github.io/kaart/marker_red_transparant.png`,
+                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+                });
+            }
+
+            if(aggregationLvl === 1)
+            {
+                DefaultIcon = L.icon({
+                    iconUrl: `https://laurens-vb.github.io/kaart/marker_blue_transparant.png`,
+                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+                });
+            }
+
+            if(aggregationLvl === 2)
+            {
+                DefaultIcon = L.icon({
+                    iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
+                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+                });
+            }
+
+            var DefaultIcon;
 
             var marker =  L.marker([lat,lng], {icon: DefaultIcon});
             marker.addTo(map)
