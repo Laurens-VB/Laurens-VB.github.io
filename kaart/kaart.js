@@ -148,7 +148,7 @@
 
             for(var regio in regios)
             {
-                if(regios[regio][1].trim()=== undefined) { return; }
+                if(regios[regio][1] === undefined) { return; }
                 
                 this.createMarkers(Number(regios[regio][0].trim())
                 , Number(regios[regio][1].trim())
