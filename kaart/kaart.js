@@ -71,7 +71,7 @@
                 
 			});
 
-            this.addEventListener("keypress", () => {
+            this.addEventListener("ControlLeft", () => {
                 console.log("KEY PRESSED");
             })
 
