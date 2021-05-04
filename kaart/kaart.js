@@ -117,11 +117,12 @@
                     string = string.slice(1,-1);
                     regioFormatted.push(string.split(','));
                     //array van 4 elem doorgeven aan functie remake zodanig dat alle markers opnieuw geplaatst worden!
-                    console.log(string);
                 }
 
                 console.log("REGIO VERANDERT");
                 console.log(regioFormatted);
+
+                this.remake(regioFormatted);
 			}
         }
         
@@ -139,9 +140,13 @@
 
         remake(regios)
         {
+            console.log(regios);
+
             this.popAllMarks();
 
-            console.log(regios);
+            console.log("POPPED");
+
+            /*console.log(regios);
 
             for(var regio in regios)
             {
@@ -152,7 +157,7 @@
                 , this.$test
                 , Number(regios[regio][3].trim()));
                 
-            }
+            }*/
 
 
         }
