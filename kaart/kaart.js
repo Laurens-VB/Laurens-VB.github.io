@@ -148,13 +148,14 @@
 
             for(var regio in regios)
             {
-                if(regios[regio][1] === undefined) { return; }
+                if(regios[regio][1] !== undefined) {                 
+                    this.createMarkers(Number(regios[regio][0].trim())
+                    , Number(regios[regio][1].trim())
+                    , regios[regio][2].trim()
+                    , this.$test
+                    , Number(regios[regio][3].trim())); }
                 
-                this.createMarkers(Number(regios[regio][0].trim())
-                , Number(regios[regio][1].trim())
-                , regios[regio][2].trim()
-                , this.$test
-                , Number(regios[regio][3].trim()));
+
                 
             }
 
