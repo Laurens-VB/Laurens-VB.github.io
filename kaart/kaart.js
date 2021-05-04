@@ -140,6 +140,14 @@
 
             console.log(regios);
 
+            for(var regio in regios)
+            {
+                this.addMarkerToMap(regio[0]
+                    , regio[1]
+                    , regio[2]
+                    , this.$map);
+            }
+
         }
 
         addMarkerToMap(lat,lng,name,map)
