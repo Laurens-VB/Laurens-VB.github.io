@@ -1,5 +1,3 @@
-const { marker } = require("leaflet");
-
 (function()  {
     runLeafletCDN();
 
