@@ -113,6 +113,7 @@
                     var string = this.$regios[element];
                     string = string.slice(1,-1);
                     console.log(string.split(','));
+                    //array van 4 elem doorgeven aan functie remake zodanig dat alle markers opnieuw geplaatst worden!
                 }
 
                 this.remake();
