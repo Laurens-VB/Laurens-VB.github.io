@@ -154,7 +154,8 @@
 
         addMarkerToMap(lat,lng,name,map)
         {
-            let DefaultIcon = L.icon({
+            var DefaultIcon;
+            DefaultIcon = L.icon({
                 iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
                 shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
             });
