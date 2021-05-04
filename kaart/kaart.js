@@ -106,7 +106,7 @@
             }
 
             if ("regios" in oChangedProperties) {
-                console.log("ik ben verandert");
+                console.log("IK BEN VERANDERT");
 				this.$regios = oChangedProperties["regios"];
 
                 var regioFormatted = [];
@@ -117,9 +117,9 @@
                     string = string.slice(1,-1);
                     regioFormatted.push(string.split(','));
                     //array van 4 elem doorgeven aan functie remake zodanig dat alle markers opnieuw geplaatst worden!
-
-                    console.log(string.slice(1,-1));
                 }
+
+                console.log("REGIO VERANDERT");
                 console.log(regioFormatted);
 			}
         }
