@@ -186,8 +186,7 @@
 
             var DefaultIcon;
 
-            var marker =  L.marker([lat,lng]);
-            marker.setIcon({icon: DefaultIcon});
+            var marker =  L.marker([lat,lng], {icon: DefaultIcon});
             marker.addTo(this.$test);
             marker.addEventListener('click', () =>
             {
