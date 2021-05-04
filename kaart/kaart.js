@@ -142,18 +142,33 @@
             this.popAllMarks();
 
             console.log(regios);
-
+            if(aggrLvl !== 4)
+            {
+                for(var regio in regios)
+                {
+                    if(Number(regios[regio][3].trim()) === aggrLvl)
+                    {
+                        this.addMarkerToMap(Number(regios[regio][0].trim())
+                        , Number(regios[regio][1].trim())
+                        , regios[regio][2].trim()
+                        , this.$test
+                        , Number(regios[regio][3].trim()));
+                    }
+                }
+                return;
+            }
+            
             for(var regio in regios)
             {
-                if(Number(regios[regio][3].trim()) === aggrLvl)
-                {
-                    this.addMarkerToMap(Number(regios[regio][0].trim())
-                    , Number(regios[regio][1].trim())
-                    , regios[regio][2].trim()
-                    , this.$test
-                    , Number(regios[regio][3].trim()));
-                }
+                
+                this.addMarkerToMap(Number(regios[regio][0].trim())
+                , Number(regios[regio][1].trim())
+                , regios[regio][2].trim()
+                , this.$test
+                , Number(regios[regio][3].trim()));
+                
             }
+
 
         }
 
