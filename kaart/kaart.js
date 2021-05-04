@@ -105,7 +105,7 @@
                 return;
             }
 
-            /*if ("regios" in oChangedProperties) {
+            if ("regios" in oChangedProperties) {
                 console.log("ik ben verandert");
 				this.$regios = oChangedProperties["regios"];
 
@@ -120,10 +120,8 @@
 
                     console.log(string.slice(1,-1));
                 }
-
-                this.remake(regioFormatted);
                 console.log(regioFormatted);
-			}*/
+			}
         }
         
         onCustomWidgetDestroy(){
