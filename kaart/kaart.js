@@ -35,7 +35,7 @@
 
             this.$test = L.map(this.$map).setView([50.641111, 4.668056], 1);
 
-            var selectedLocation = "";
+            this.$selectedLocation = "";
 
             
             console.log(L.Icon.Default.prototype._getIconUrl());
@@ -59,7 +59,7 @@
             this.addMarkerToMap(47,2,"FR",this.$test);
 
             this.addEventListener("click", () => {
-                var properties = {selectedRegionISO2 : selectedLocation};
+                var properties = {selectedRegionISO2 : this.$selectedLocation};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
@@ -191,7 +191,7 @@
             marker.addTo(map)
             marker.addEventListener('click', () =>
             {
-                selectedLocation = name;
+                this.$selectedLocation = name;
             });
 
             this.$markers.push(marker);
