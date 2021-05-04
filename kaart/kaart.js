@@ -188,7 +188,7 @@
 
             var marker =  L.marker([lat,lng]);
             marker.setIcon({icon: DefaultIcon});
-            marker.addTo(map);
+            marker.addTo(this.$test);
             marker.addEventListener('click', () =>
             {
                 this.$selectedLocation = name;
