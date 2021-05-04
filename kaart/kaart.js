@@ -108,15 +108,17 @@
             if ("regios" in oChangedProperties) {
 				this.$regios = oChangedProperties["regios"];
 
+                regioFormatted = [];
+
                 for(var element in this.$regios)
                 {
                     var string = this.$regios[element];
                     string = string.slice(1,-1);
-                    console.log(string.split(','));
+                    regioFormatted.push(string.split(','));
                     //array van 4 elem doorgeven aan functie remake zodanig dat alle markers opnieuw geplaatst worden!
                 }
 
-                this.remake();
+                this.remake(regioFormatted);
 			}
         }
         
@@ -132,9 +134,11 @@
             this.$test.removeLayer(this.$markers.pop());
         }
 
-        remake()
+        remake(regios)
         {
             this.popAllMarks();
+
+            console.log(regios);
 
         }
 
