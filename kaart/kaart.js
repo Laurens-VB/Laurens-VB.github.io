@@ -145,45 +145,22 @@
                 this.addMarkerToMap(Number(regios[regio][0].trim())
                     , Number(regios[regio][1].trim())
                     , regios[regio][2].trim()
-                    , Number(regios[regio][3].trim()));
+                    , this.$test);
                 
                 console.log("marker added");
             }
 
         }
 
-        addMarkerToMap(lat,lng,name,aggrLvl)
+        addMarkerToMap(lat,lng,name,map)
         {
-            var DefaultIcon;
-
-            if(aggrLvl === 0)
-            {
-                DefaultIcon = L.icon({
-                    iconUrl: `https://laurens-vb.github.io/kaart/marker_red_transparant.png`,
-                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-                });
-            }
-
-            if(aggrLvl === 1)
-            {
-                DefaultIcon = L.icon({
-                    iconUrl: `https://laurens-vb.github.io/kaart/marker_blue_transparant.png`,
-                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-                });
-            }
-
-            if(aggrLvl === 2)
-            {
-                DefaultIcon = L.icon({
-                    iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
-                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-                });
-            }
-
-
+            let DefaultIcon = L.icon({
+                iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
+                shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+            });
 
             var marker =  L.marker([lat,lng], {icon: DefaultIcon});
-            marker.addTo(this.$test)
+            marker.addTo(map)
             marker.addEventListener('click', () =>
             {
                 selectedLocation = name;
