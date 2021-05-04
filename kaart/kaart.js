@@ -148,11 +148,7 @@
 
             for(var regio in regios)
             {
-                console.log(Number(regios[regio][0].trim()));
-                console.log(Number(regios[regio][1].trim()));
-                console.log(regios[regio][2].trim());
-                console.log(this.$test);
-                console.log( Number(regios[regio][3].trim()));
+                if(regios[regio][1].trim()=== undefined) { return; }
                 
                 this.createMarkers(Number(regios[regio][0].trim())
                 , Number(regios[regio][1].trim())
