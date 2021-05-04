@@ -145,17 +145,16 @@
                 this.addMarkerToMap(Number(regios[regio][0].trim())
                     , Number(regios[regio][1].trim())
                     , regios[regio][2].trim()
-                    , this.$test);
+                    , this.$test
+                    , Number(regios[regio][3].trim()));
                 
                 console.log("marker added");
             }
 
         }
 
-        addMarkerToMap(lat,lng,name,map)
+        addMarkerToMap(lat,lng,name,map, aggregationLvl)
         {
-            var aggregationLvl = 1;
-
             var DefaultIcon;
             DefaultIcon = L.icon({
                 iconUrl: `https://laurens-vb.github.io/kaart/marker_green_transparant.png`,
