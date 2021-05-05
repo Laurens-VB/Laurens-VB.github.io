@@ -208,7 +208,9 @@
                 var newMarker =  L.marker([lat,lng], {icon: BlackIcon});
 
                 this.switchMarker(marker, newMarker);
-                
+
+                console.log(marker.getIcon());
+
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
                  }
