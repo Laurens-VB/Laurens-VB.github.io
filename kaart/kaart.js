@@ -200,7 +200,7 @@
             this.$markers.push(marker);
             marker.addEventListener('click', () =>
             {
-                if(marker.getIcon.options.iconUrl !== `https://laurens-vb.github.io/kaart/marker_black_transparant.png`)
+                if(marker.getIcon().options.iconUrl !== `https://laurens-vb.github.io/kaart/marker_black_transparant.png`)
                 {
                     marker.setIcon(
                         L.icon({
