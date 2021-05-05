@@ -203,10 +203,11 @@
                 if(marker.getIcon().options.iconUrl === "https://laurens-vb.github.io/kaart/marker_black_transparant.png")
                 {
                     var newMarker =  L.marker([lat,lng], {icon: DefaultIcon});
-    
-                    this.switchMarker(marker, newMarker);
-
-                    this.$selectedLocations.splice(this.$selectedLocations.indexOf(name),1);
+                    newMarker.addEventListener('click', () =>{
+                        
+                        this.switchMarker(marker, newMarker);
+                        this.$selectedLocations.splice(this.$selectedLocations.indexOf(name),1);
+                    })
                 }
                 else
                 {
