@@ -200,21 +200,31 @@
             this.$markers.push(marker);
             marker.addEventListener('click', () =>
             {
-                var BlackIcon = L.icon({
-                    iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
-                    shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-                });
+                if(marker.getIcon().options.iconUrl === "https://laurens-vb.github.io/kaart/marker_black_transparant.png")
+                {
+                    var newMarker =  L.marker([lat,lng], {icon: DefaultIcon});
+    
+                    this.switchMarker(marker, newMarker);
 
-                var newMarker =  L.marker([lat,lng], {icon: BlackIcon});
+                    this.$selectedLocations.splice(this.$selectedLocations.indexOf(name),1);
+                }
+                else
+                {
+                    var BlackIcon = L.icon({
+                        iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
+                        shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+                    });
+    
+                    var newMarker =  L.marker([lat,lng], {icon: BlackIcon});
+    
+                    this.switchMarker(marker, newMarker);
 
-                this.switchMarker(marker, newMarker);
-
-                console.log(marker.getIcon().options.iconUrl);
+                    this.$selectedLocations.push(name);
+                }
 
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
                  }
-                this.$selectedLocations.push(name);
             });
         }
 
