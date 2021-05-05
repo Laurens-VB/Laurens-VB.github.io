@@ -112,6 +112,7 @@
             if ("regios" in oChangedProperties) {
                 console.log("IK BEN VERANDERT");
 				this.$regios = oChangedProperties["regios"];
+                this.$selectedLocations = [];
 
                 var regioFormatted = [];
 
