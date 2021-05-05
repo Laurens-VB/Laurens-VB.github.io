@@ -200,18 +200,30 @@
             this.$markers.push(marker);
             marker.addEventListener('click', () =>
             {
-                marker.setIcon(
-                    L.icon({
-                        iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
-                        shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-                    })
-                )
+                if(marker.getIcon.options.iconUrl !== `https://laurens-vb.github.io/kaart/marker_black_transparant.png`)
+                {
+                    marker.setIcon(
+                        L.icon({
+                            iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
+                            shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
+                        })
+                    );
 
-                this.$selectedLocations.push(name);
+                    this.$selectedLocations.push(name);
+                }
+                else{
+                    marker.setIcon(
+                        DefaultIcon
+                    );
+
+                    this.$selectedLocations.splice(this.$selectedLocations.indexOf(name),1);
+                }
+
+                
 
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
-                 }
+                }
             });
         }
 
