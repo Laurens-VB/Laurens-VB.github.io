@@ -202,26 +202,14 @@
             {
                 if(marker.getIcon().options.iconUrl === "https://laurens-vb.github.io/kaart/marker_black_transparant.png")
                 {
-                    var newMarker =  L.marker([lat,lng], {icon: DefaultIcon});
-                    newMarker.addEventListener('click', () =>{
-                        
-                        this.switchMarker(marker, newMarker);
-                        this.$selectedLocations.splice(this.$selectedLocations.indexOf(name),1);
-                    })
+                    marker.getIcon().options.iconUrl = DefaultIcon.options.iconUrl;
                 }
                 else
                 {
-                    var BlackIcon = L.icon({
-                        iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
-                        shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
-                    });
-    
-                    var newMarker =  L.marker([lat,lng], {icon: BlackIcon});
-    
-                    this.switchMarker(marker, newMarker);
-
-                    this.$selectedLocations.push(name);
+                    marker.getIcon().options.iconUrl ="https://laurens-vb.github.io/kaart/marker_black_transparant.png";
                 }
+                
+                this.$selectedLocations.push(name);
 
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
@@ -229,12 +217,11 @@
             });
         }
 
-        switchMarker(currentMarker, newMarker)
+        /*switchMarker(currentMarker, newMarker, name)
         {
             this.$test.removeLayer(currentMarker);
             newMarker.addTo(this.$test);
-            console.log("Marker Switched");
-        }
+        }*/
     });
 })();
 
