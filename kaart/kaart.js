@@ -205,12 +205,22 @@
                     shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
                 });
 
-                marker.setIcon({icon: BlackIcon});
+                var newMarker =  L.marker([lat,lng], {icon: BlackIcon});
+
+                this.switchMarker(marker, newMarker);
+                
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
                  }
                 this.$selectedLocations.push(name);
             });
+        }
+
+        switchMarker(currentMarker, newMarker)
+        {
+            this.$test.removeLayer(currentMarker);
+            newMarker.addTo(this.$test);
+            console.log("Marker Switched");
         }
     });
 })();
