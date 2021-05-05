@@ -202,7 +202,7 @@
             {
                 marker.setIcon(
                     L.icon({
-                        iconUrl: `"https://laurens-vb.github.io/kaart/marker_black_transparant.png"`,
+                        iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
                         shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
                     })
                 )
