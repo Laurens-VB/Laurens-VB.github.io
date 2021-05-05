@@ -209,7 +209,7 @@
 
                 this.switchMarker(marker, newMarker);
 
-                console.log(marker.getIcon());
+                console.log(marker.getIcon().options.iconUrl);
 
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
