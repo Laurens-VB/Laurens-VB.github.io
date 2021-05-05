@@ -19,7 +19,7 @@
     {
         "selectedRegionISO2" : 
         {
-            "type" : "string",
+            "type" : "string[]",
             "description" : "selectedRegionISO2",
             "default" : ""
         },
@@ -40,7 +40,7 @@
     {
         "getselectedRegionISO2":
         {
-            "returnType" : "string",
+            "returnType" : "string[]",
             "description" : "retourneert kleur",
             "body" : "return this.selectedRegionISO2;"
         },
@@ -50,7 +50,7 @@
             [
                 {
                     "name" : "selectedRegionISO2",
-                    "type" : "string",
+                    "type" : "string[]",
                     "description" : "set new selectedRegionISO2"
                 }
             ],

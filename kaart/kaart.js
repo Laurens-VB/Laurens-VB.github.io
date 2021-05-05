@@ -35,7 +35,7 @@
 
             this.$test = L.map(this.$map).setView([50.641111, 4.668056], 1);
 
-            this.$selectedLocation = "";
+            this.$selectedLocations = [];
 
             
             console.log(L.Icon.Default.prototype._getIconUrl());
@@ -59,7 +59,7 @@
             this.createMarkers(47,2,"FR",this.$test);
 
             this.addEventListener("click", () => {
-                var properties = {selectedRegionISO2 : this.$selectedLocation};
+                var properties = {selectedRegionISO2 : this.$selectedLocations};
                 this.dispatchEvent(new CustomEvent("propertiesChanged", 
                 {
                     detail: 
@@ -205,7 +205,7 @@
                 if (KeyboardEvent.ctrlKey) {
                     console.log("CONTROL KEY PRESSED");
                  }
-                this.$selectedLocation = name;
+                this.$selectedLocations.push(name);
             });
         }
     });
