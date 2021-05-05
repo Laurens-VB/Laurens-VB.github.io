@@ -195,14 +195,12 @@
                 });
             }
 
-            var DefaultIcon;
-
             var marker =  L.marker([lat,lng], {icon: DefaultIcon});
             marker.addTo(this.$test);
             this.$markers.push(marker);
             marker.addEventListener('click', () =>
             {
-                BlackIcon = L.icon({
+                var BlackIcon = L.icon({
                     iconUrl: `https://laurens-vb.github.io/kaart/marker_black_transparant.png`,
                     shadowUrl: `https://unpkg.com/browse/leaflet@1.7.1/dist/images/marker-shadow.png`
                 });
