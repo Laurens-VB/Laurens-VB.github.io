@@ -86,8 +86,9 @@
 			if(strValue != undefined)
 			{
 				var noemer = compareTo;
-				var teller = 0;
+				var teller = parseInt(strValue);
 
+				/*
 				if(strValue != "")
 				{
 					var splitted_values = strValue.slice(0,-1)
@@ -98,7 +99,7 @@
 						var value = parseInt(splitted_values[i]);
 						teller = teller + value;
 					}
-				}
+				}*/
 
 				calculation = (teller/noemer) * 100;
 
