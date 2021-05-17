@@ -48,7 +48,6 @@
 		
 		<div class="container">
 		  <div class="row">
-		  <h1>New Confirmed 09/04/2021</h1>
 		    <div class="col-md-4 col-sm-4">
 		      <div class="metric participation" data-ratio=".95">
 		        <svg viewBox="0 0 1000 500">
