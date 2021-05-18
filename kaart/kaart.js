@@ -24,7 +24,6 @@
 		constructor() 
         {
             super();
-            console.log("me neme is jeff 2");
             this._firstConnection = true;
 
 			this._shadowRoot = this.attachShadow({mode: "open"});
