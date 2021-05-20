@@ -1,0 +1,52 @@
+{
+    "name": "Datepicker",
+	"description": "LVB datepicker",
+	"vendor": "Laurens VB",
+	"id": "LVB_COLOR_PICKER",
+	"newInstancePrefix": "colorpicker",
+	"version": "4.0.0",
+    "webcomponents": 
+    [
+        {
+			"kind": "main",
+			"tag": "com-colorpicker",
+            "url": "https://laurens-vb.github.io/colorpicker/colorpicker.js",
+            "integrity": "",
+            "ignoreIntegrity" : true
+        }
+    ],
+    "properties": 
+    {
+        "color" : 
+        {
+            "type" : "string",
+            "description" : "color",
+            "default" : "13-04-2021"
+        }
+	},
+	"methods": 
+    {
+        "getColor":
+        {
+            "returnType" : "string",
+            "description" : "retourneert color",
+            "body" : "return this.date;"
+        },
+        "setColor":
+        {
+            "parameters" : 
+            [
+                {
+                    "name" : "date",
+                    "type" : "string",
+                    "description" : "set new color"
+                }
+            ],
+            "description" : "set test kleur",
+            "body" : "this.color = color;"
+        }
+	},
+	"events": 
+    {
+	}
+}
