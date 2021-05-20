@@ -21,7 +21,7 @@
         {
             "type" : "string",
             "description" : "color",
-            "default" : "13-04-2021"
+            "default" : ""
         }
 	},
 	"methods": 
@@ -30,14 +30,14 @@
         {
             "returnType" : "string",
             "description" : "retourneert color",
-            "body" : "return this.date;"
+            "body" : "return this.color;"
         },
         "setColor":
         {
             "parameters" : 
             [
                 {
-                    "name" : "date",
+                    "name" : "color",
                     "type" : "string",
                     "description" : "set new color"
                 }
